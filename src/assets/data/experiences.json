@@ -1,0 +1,36 @@
+[
+  {
+    "company": "Front End Developer at BeIT",
+    "date": "Jan 2020 – Current",
+    "jobs": [
+      "Creating mockups and prototypes",
+      "Design and build UI/UX",
+      "Integrating with web services, fixing bugs, and doing optimization",
+      "Do back end stuffs when necessary"
+    ]
+  },
+  {
+    "company": "Front End Developer at PT Perjalanan Menembus Galaksi",
+    "date": "Sep 2021 – Nov 2021",
+    "jobs": ["Integrating API", "Designing and Building components"]
+  },
+  {
+    "company": "Back End Developer at Ink & Canvas",
+    "date": "Nov 2017 – Oct 2019",
+    "jobs": [
+      "Working closely with clients to establish problem, specifications and system designs",
+      "Coordinating with internal in developing project plans and solutions",
+      "Building, testing, deploying, and maintaining applications",
+      "Refactoring for better performance pupose"
+    ]
+  },
+  {
+    "company": "Full Stack Developer at PT. IndoVisual Presentatama",
+    "date": "Feb 2016 – Nov 2017",
+    "jobs": [
+      "Collaborating with product management team to design, build, integrate and test systems",
+      "Designing new product elements such as IR and RF connection, CCTV live streaming, hardware integration, and device-to-device communication",
+      "Modifying existing software to fix issues, and improve performance"
+    ]
+  }
+]
