@@ -18,7 +18,7 @@ const showcases = ref([]);
     <div v-if="showcases.length === 0" class="text-center">
       Loading content...
     </div>
-    <div class="masonry-1-col md:masonry-2-col">
+    <div class="masonry-1-col md:masonry-3-col">
       <router-link
         v-for="(item, index) in showcases"
         :to="`/showcase/${item.id}`"
@@ -29,7 +29,7 @@ const showcases = ref([]);
           class="w-full h-full overflow-hidden rounded-xl relative lg:shadow-md flex justify-center"
         >
           <div
-            class="title-container opacity-[0] absolute w-full h-full top-0 left-0 bg-red-500/75 rounded-xl p-5 flex justify-center items-center text-xl text-center text-white font-bold"
+            class="title-container opacity-[0] absolute w-full h-full top-0 left-0 bg-red-500/75 rounded-xl p-5 flex justify-center items-center text-md text-center text-white font-bold"
             style="z-index: 999"
           >
             {{ item.title.rendered }}
@@ -68,7 +68,7 @@ const showcases = ref([]);
     }
 
     img {
-      @apply scale-[1.2];
+      @apply scale-[1.25];
     }
   }
 }

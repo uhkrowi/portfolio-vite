@@ -26,7 +26,7 @@ const introduction = ref("");
             class="w-[120px] h-[120px] rounded-full shadow-md"
           />
         </div>
-        <div id="introduction" v-html="introduction" class="flex flex-col justify-center prose text-gray-900">
+        <div id="introduction" v-html="introduction" class="flex flex-col justify-center prose text-[14px] text-gray-900">
         </div>
       </div>
     </Card>
@@ -34,7 +34,7 @@ const introduction = ref("");
     <Card label="Experiences">
       <div v-for="(item, index) in experiences" :key="index" class="py-5">
         <div class="grid grid-cols-1 lg:grid-cols-[200px_auto]">
-          <div>{{ item.date }}</div>
+          <div class="opacity-50 font-bold">{{ item.date }}</div>
           <div>
             <span class="block font-bold">{{ item.company }}</span>
             <ul>
@@ -69,7 +69,7 @@ const introduction = ref("");
               >{{ item.name }}</span
             >
           </div>
-          <span class="block text-gray-500 font-bold text-sm py-2">{{
+          <span class="block opacity-50 font-bold text-xs py-2">{{
             item.date
           }}</span>
           <span class="block">{{ item.description }}</span>
@@ -86,7 +86,7 @@ const introduction = ref("");
     </Card>
 
     <Card label="Shoot a message">
-      <div class="grid grid-cols-2 gap-10">
+      <div class="grid grid-cols-3 gap-10">
         <a href="mailto:uhkrowi@gmail.com" class="flex contact-container">
           <div class="flex items-start mr-3">
             <img

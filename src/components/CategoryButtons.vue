@@ -38,6 +38,6 @@ const categories = ref([]);
 
 <style>
 .category-button {
-  @apply rounded-xl shadow-md flex justify-center px-3 py-2 hover:scale-[1.05] transition duration-500 text-white text-sm;
+  @apply rounded-xl shadow-md flex justify-center px-3 py-2 hover:scale-[1.05] transition duration-500 text-white;
 }
 </style>

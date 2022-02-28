@@ -14,7 +14,7 @@ const menus = [
   },
   // {
   //   label: "Service",
-  //   link: "/service",
+  //   link: "/services",
   // },
 ];
 
@@ -79,11 +79,15 @@ const toggleNavigation = () => {
           />
         </div>
       </div>
-      <div class="text-2xl font-bold flex items-center justify-center lg:justify-start">
+      <div
+        class="text-2xl font-bold flex items-center justify-center lg:justify-start"
+      >
         Nurul Uhkrowi
         <!-- <span class="text-4xl text-red-500 ml-2">&bull;</span> -->
       </div>
-      <div class="text-xs mt-2 text-center lg:text-left">FULLSTACK WEB DEVELOPER</div>
+      <div class="text-xs mt-2 text-center lg:text-left">
+        FULLSTACK WEB DEVELOPER
+      </div>
       <div
         class="pt-[80px] lg:pt-[40px] w-full flex flex-col items-center lg:block"
       >

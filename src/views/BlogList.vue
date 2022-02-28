@@ -13,15 +13,15 @@ const loadContentText = ref("");
 
 const blogs = ref([]);
 async function fetchPosts() {
-  blogs.value = []
-  loadContentText.value = "Loading content..."
+  blogs.value = [];
+  loadContentText.value = "Loading content...";
 
   const categoryID = $route.query.categories;
   const categoryParam = categoryID ? `categories=${categoryID}` : "";
 
   try {
     const res = await fetch(
-      `https://portfolio.halimdut.xyz/wp-json/wp/v2/posts?${categoryParam}`
+      `https://portfolio.halimdut.xyz/wp-json/wp/v2/posts?_embed&${categoryParam}`
     );
     const json = await res.json();
     blogs.value = json;
@@ -102,18 +102,23 @@ function closeSearchedModal() {
       {{ loadContentText }}
     </div>
     <div v-else class="grid grid-cols-1 mt-5">
-      <div v-for="(item, index) in blogs" :key="index">
-        <router-link
-          :to="`/blog/${item.id}`"
-          class="md:flex justify-between cursor-pointer hover:bg-white py-5 px-3"
-        >
-          {{ item.title.rendered }}
-          <span class="block text-sm text-right font-bold">{{
-            dayjs(item.date).format("MMM DD YYYY")
-          }}</span>
-        </router-link>
-        <div class="border-b border-gray-300 w-full"></div>
-      </div>
+      <router-link
+        v-for="(item, index) in blogs"
+        :key="index"
+        :to="`/blog/${item.id}`"
+        class="cursor-pointer hover:bg-white"
+      >
+        <div class="md:flex justify-between items-center py-3 md:py-5 px-3">
+          <span class="block">{{ item.title.rendered }}</span>
+          <div class="text-xs text-right font-bold opacity-75 mt-2 md:mt-0">
+            <span
+              >{{ item._embedded["wp:term"][0].map((x) => x.name).join(", ") }} |
+            </span>
+            <span>{{ dayjs(item.date).format("MMM DD YYYY") }}</span>
+          </div>
+        </div>
+        <div class="border-b border-gray-300 w-full mt-1"></div>
+      </router-link>
     </div>
   </Card>
 </template>

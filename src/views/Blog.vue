@@ -12,7 +12,7 @@ const id = $route.params.id;
 const content = ref(null);
 (async () => {
   const res = await fetch(
-    `https://portfolio.halimdut.xyz/wp-json/wp/v2/posts/${id}`
+    `https://portfolio.halimdut.xyz/wp-json/wp/v2/posts/${id}?_embed`
   );
   const json = await res.json();
   content.value = json;
@@ -23,9 +23,20 @@ const content = ref(null);
   <Card>
     <div v-if="!content" class="text-center">Loading content...</div>
     <div v-else>
-      <div class="w-full text-center mb-5 text-sm font-bold">
-        <div class="text-4xl">{{ content.title.rendered }}</div>
-        <div class="mt-5 font-normal">
+      <div class="w-full text-center mb-5 font-bold">
+        <div class="text-3xl">{{ content.title.rendered }}</div>
+        <div class="mt-5 font-normal flex flex-wrap justify-center">
+          <span
+            v-for="(category, index) in content._embedded['wp:term'][0].map(
+              (x) => x.name
+            )"
+            :key="index"
+            class="p-1 px-2 border bg-gray-300 mx-1"
+          >
+            {{ category }}
+          </span>
+        </div>
+        <div class="mt-5 opacity-50">
           Published {{ dayjs(content.date).format("MMM DD YYYY") }}
         </div>
       </div>
@@ -33,7 +44,7 @@ const content = ref(null);
       <div class="prose prose-zinc prose-xl">
         <div
           v-html="content.content.rendered"
-          class="text-[16px] blog-content"
+          class="text-[14px] blog-content"
         ></div>
       </div>
       <div class="pt-16">
