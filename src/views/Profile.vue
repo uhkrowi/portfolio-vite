@@ -18,7 +18,8 @@ const introduction = ref("");
 
 <template>
   <div class="grid gap-[30px]">
-    <Card label="Hi, I'm Nurul">
+    <!-- <Card label="Hi, I'm Nurul"> -->
+    <Card label="Hi 👋">
       <div class="grid grid-cols-1 lg:grid-cols-[200px_auto] gap-5 lg:gap-0">
         <div class="flex justify-center">
           <img

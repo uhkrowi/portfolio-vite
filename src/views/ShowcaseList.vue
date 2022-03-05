@@ -26,10 +26,10 @@ const showcases = ref([]);
         class="block showcase-container break-inside p-3 mb-5 text-white select-none cursor-pointer"
       >
         <div
-          class="w-full h-full overflow-hidden rounded-xl relative lg:shadow-md flex justify-center"
+          class="w-full h-full overflow-hidden rounded-lg relative lg:shadow-lg flex justify-center"
         >
           <div
-            class="title-container opacity-[0] absolute w-full h-full top-0 left-0 bg-red-500/75 rounded-xl p-5 flex justify-center items-center text-md text-center text-white font-bold"
+            class="title-container opacity-[0] absolute w-full h-full top-0 left-0 bg-red-500/75 rounded-lg p-5 flex justify-center items-center text-md text-center text-white font-bold"
             style="z-index: 999"
           >
             {{ item.title.rendered }}
@@ -40,7 +40,7 @@ const showcases = ref([]);
                 ?.medium?.source_url
             "
             :alt="item.slug"
-            class="rounded-xl shadow-md w-full"
+            class="rounded-lg shadow-lg w-full"
             style="z-index: 998"
           />
         </div>

@@ -3,7 +3,7 @@ import Card from "@/components/Card.vue";
 import CategoryButtons from "@/components/CategoryButtons.vue";
 
 import { ref, watch } from "vue";
-import dayjs from "dayjs";
+// import dayjs from "dayjs";
 import { useRoute, useRouter } from "vue-router";
 
 const $route = useRoute();
@@ -112,9 +112,11 @@ function closeSearchedModal() {
           <span class="block">{{ item.title.rendered }}</span>
           <div class="text-xs text-right font-bold opacity-75 mt-2 md:mt-0">
             <span
-              >{{ item._embedded["wp:term"][0].map((x) => x.name).join(", ") }} |
+              >{{
+                item._embedded["wp:term"][0].map((x) => x.name).join(", ")
+              }}
+              <!-- | {{ dayjs(item.date).format("MMM DD YYYY") }} -->
             </span>
-            <span>{{ dayjs(item.date).format("MMM DD YYYY") }}</span>
           </div>
         </div>
         <div class="border-b border-gray-300 w-full mt-1"></div>

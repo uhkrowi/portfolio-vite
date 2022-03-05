@@ -33,12 +33,8 @@ const socials = [
   // },
   {
     icon: "https://img.icons8.com/ios-glyphs/2x/ffffff/facebook-f.png",
-    link: "https://facebook.com/uhkrowi/",
+    link: "https://facebook.com/uhkrowi",
   },
-  // {
-  //   icon: "https://img.icons8.com/ios-filled/2x/ffffff/youtube-play.png",
-  //   link: "https://www.youtube.com/channel/UCWCgsv9nGXUWC6AxTYICHGw",
-  // },
 ];
 
 const toggleNavigation = () => {
@@ -65,7 +61,7 @@ const toggleNavigation = () => {
 
     <div
       id="navigation"
-      class="hidden bottom-0 top-0 left-0 right-0 lg:block lg:relative lg:w-[265px] lg:min-h-[520px] p-4 lg:py-[55px] lg:px-[30px] bg-[#111111] text-white lg:rounded-xl"
+      class="hidden bottom-0 top-0 left-0 right-0 lg:block lg:relative lg:w-[265px] lg:min-h-[520px] p-4 lg:py-[55px] lg:px-[30px] bg-[#111111] text-white lg:rounded-xl shadow-lg"
     >
       <div class="w-full flex justify-end mb-5 lg:hidden">
         <div

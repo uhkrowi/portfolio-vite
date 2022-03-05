@@ -4,7 +4,7 @@ import CategoryButtons from "@/components/CategoryButtons.vue";
 
 import { ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import dayjs from "dayjs";
+// import dayjs from "dayjs";
 
 const $route = useRoute();
 
@@ -36,11 +36,11 @@ const content = ref(null);
             {{ category }}
           </span>
         </div>
-        <div class="mt-5 opacity-50">
+        <!-- <div class="mt-5 opacity-50">
           Published {{ dayjs(content.date).format("MMM DD YYYY") }}
-        </div>
+        </div> -->
       </div>
-      <hr class="my-10" />
+      <hr class="my-10 bg-gray-400" />
       <div class="prose prose-zinc prose-xl">
         <div
           v-html="content.content.rendered"
@@ -51,7 +51,7 @@ const content = ref(null);
         <div class="flex justify-center">
           <span class="text-lg px-3 py-2">Browse By Topic</span>
         </div>
-        <div class="flex justify-center pt-5">
+        <div class="flex justify-center pt-2">
           <CategoryButtons></CategoryButtons>
         </div>
       </div>

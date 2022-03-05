@@ -1,6 +1,15 @@
 [
   {
-    "company": "Front End Developer at BeIT",
+    "company": "Back End Web Developer at PT Astra International",
+    "date": "December 2021 – Current",
+    "jobs": [
+      "As a body hire from PT BeIT",
+      "Join into Astra team to modify the existing system",
+      "Focus on tax regulation"
+    ]
+  },
+  {
+    "company": "Front End Web Developer at PT BeIT",
     "date": "Jan 2020 – Current",
     "jobs": [
       "Creating mockups and prototypes",
@@ -10,12 +19,12 @@
     ]
   },
   {
-    "company": "Front End Developer at PT Perjalanan Menembus Galaksi",
+    "company": "Front End Web Developer at PT Perjalanan Menembus Galaksi",
     "date": "Sep 2021 – Nov 2021",
-    "jobs": ["Integrating API", "Designing and Building components"]
+    "jobs": ["Designing and creating web components", "Integrating API"]
   },
   {
-    "company": "Back End Developer at Ink & Canvas",
+    "company": "Back End Web Developer at PT Ink & Canvas",
     "date": "Nov 2017 – Oct 2019",
     "jobs": [
       "Working closely with clients to establish problem, specifications and system designs",
@@ -25,7 +34,7 @@
     ]
   },
   {
-    "company": "Full Stack Developer at PT. IndoVisual Presentatama",
+    "company": "Full Stack Web Developer at PT IndoVisual Presentatama",
     "date": "Feb 2016 – Nov 2017",
     "jobs": [
       "Collaborating with product management team to design, build, integrate and test systems",

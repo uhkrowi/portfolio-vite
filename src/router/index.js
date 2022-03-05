@@ -26,7 +26,7 @@ const routes = [
     children: [
       {
         path: "",
-        redirect: (to) => "blog",
+        redirect: (to) => "profile",
       },
       {
         path: "/profile",

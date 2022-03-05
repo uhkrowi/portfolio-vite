@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center mt-10 text-lg">
+  <div class="text-center mt-10">
     <div>You're trying to an unavailable route,</div>
     <div>
       click
