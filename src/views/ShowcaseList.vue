@@ -44,7 +44,7 @@ const showcases = ref([]);
             style="z-index: 998"
           />
         </div>
-        <span class="block mt-2 text-center text-md text-gray-900 lg:hidden">{{
+        <span class="block mt-2 text-center text-md text-black lg:hidden">{{
           item.title.rendered
         }}</span>
       </router-link>

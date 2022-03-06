@@ -44,7 +44,7 @@ const content = ref(null);
       <div class="prose prose-zinc prose-xl">
         <div
           v-html="content.content.rendered"
-          class="text-[14px] blog-content"
+          class="text-[14px] blog-content text-black"
         ></div>
       </div>
       <div class="pt-16">

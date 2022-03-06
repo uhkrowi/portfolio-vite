@@ -25,7 +25,7 @@ const content = ref(null);
         <div class="text-4xl text-gray-900">{{ content.title.rendered }}</div>
       </div>
       <hr class="my-10">
-      <div class="prose prose-zinc prose-xl">
+      <div class="prose prose-zinc prose-xl text-black">
         <div v-html="content.content.rendered" class="text-sm"></div>
       </div>
     </div>

@@ -2,10 +2,10 @@
 import Card from "@/components/Card.vue";
 import experiences from "@/assets/data/experiences.json";
 import projects from "@/assets/data/projects.json";
-import certificates from "@/assets/data/certificates.json";
+// import certificates from "@/assets/data/certificates.json";
 import skills from "@/assets/data/skills.json";
 
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { marked } from "marked";
 
 const introduction = ref("");
@@ -27,15 +27,20 @@ const introduction = ref("");
             class="w-[120px] h-[120px] rounded-full shadow-md"
           />
         </div>
-        <div id="introduction" v-html="introduction" class="flex flex-col justify-center prose text-[14px] text-gray-900">
-        </div>
+        <div
+          id="introduction"
+          v-html="introduction"
+          class="flex flex-col justify-center prose text-[14px] text-black"
+        ></div>
       </div>
     </Card>
 
     <Card label="Experiences">
       <div v-for="(item, index) in experiences" :key="index" class="py-5">
         <div class="grid grid-cols-1 lg:grid-cols-[200px_auto]">
-          <div class="opacity-50 font-bold">{{ item.date }}</div>
+          <div class="opacity-75">
+            {{ item.date }}
+          </div>
           <div>
             <span class="block font-bold">{{ item.company }}</span>
             <ul>
@@ -70,7 +75,7 @@ const introduction = ref("");
               >{{ item.name }}</span
             >
           </div>
-          <span class="block opacity-50 font-bold text-xs py-2">{{
+          <span class="block opacity-75 text-xs py-2">{{
             item.date
           }}</span>
           <span class="block">{{ item.description }}</span>
@@ -78,13 +83,13 @@ const introduction = ref("");
       </div>
     </Card>
 
-    <Card label="Certifications">
+    <!-- <Card label="Certifications">
       <ul class="text-blue-700">
         <li v-for="(item, index) in certificates" :key="index">
           <a :href="item.url" target="_blank" class="hover:underline">{{ item.label }}</a>
         </li>
       </ul>
-    </Card>
+    </Card> -->
 
     <Card label="Shoot a message">
       <div class="grid grid-cols-3 gap-10">
