@@ -62,14 +62,30 @@ function closeSearchedModal() {
   <Card label="Blog">
     <div class="w-full flex justify-end pb-5">
       <div class="relative">
-        <input
-          id="searchField"
-          type="text"
-          v-model="searchText"
-          class="border rounded-xl shadow-lg h-10 px-5 w-[300px] outline-none"
-          placeholder="Search post..."
-          @keyup.enter="searchPosts()"
-        />
+        <div
+          class="flex items-center max-w-64 bg-white rounded-xl p-3 overflow-none bg-[#f2f1ef]"
+        >
+          <svg
+            fill="#777985"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 48 48"
+            width="20px"
+            height="20px"
+            class="mr-2"
+          >
+            <path
+              d="M 20.5 6 C 12.509634 6 6 12.50964 6 20.5 C 6 28.49036 12.509634 35 20.5 35 C 23.956359 35 27.133709 33.779044 29.628906 31.75 L 39.439453 41.560547 A 1.50015 1.50015 0 1 0 41.560547 39.439453 L 31.75 29.628906 C 33.779044 27.133709 35 23.956357 35 20.5 C 35 12.50964 28.490366 6 20.5 6 z M 20.5 9 C 26.869047 9 32 14.130957 32 20.5 C 32 23.602612 30.776198 26.405717 28.791016 28.470703 A 1.50015 1.50015 0 0 0 28.470703 28.791016 C 26.405717 30.776199 23.602614 32 20.5 32 C 14.130953 32 9 26.869043 9 20.5 C 9 14.130957 14.130953 9 20.5 9 z"
+            />
+          </svg>
+          <input
+            id="searchField"
+            type="text"
+            v-model="searchText"
+            placeholder="Search post..."
+            class="grow outline-none bg-[#f2f1ef]"
+            @keyup.enter="searchPosts()"
+          />
+        </div>
 
         <div
           id="searchedPostsModal"
@@ -106,15 +122,13 @@ function closeSearchedModal() {
         v-for="(item, index) in blogs"
         :key="index"
         :to="`/blog/${item.id}`"
-        class="cursor-pointer hover:bg-white"
+        class="cursor-pointer hover:bg-[#f2f1ef]"
       >
-        <div class="md:flex justify-between items-center py-3 md:py-5 px-3">
+        <div class="md:flex justify-between items-center py-3 md:py-2 md:pt-3 px-3">
           <span class="block">{{ item.title.rendered }}</span>
           <div class="text-xs text-right font-bold opacity-75 mt-2 md:mt-0">
             <span
-              >{{
-                item._embedded["wp:term"][0].map((x) => x.name).join(", ")
-              }}
+              >{{ item._embedded["wp:term"][0].map((x) => x.name).join(", ") }}
               <!-- | {{ dayjs(item.date).format("MMM DD YYYY") }} -->
             </span>
           </div>

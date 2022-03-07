@@ -20,7 +20,7 @@ const categories = ref([]);
     <div class="p-1">
       <router-link
         class="category-button"
-        :class="[$route.query.categories == undefined && activeColor ? 'bg-red-500' : 'bg-black']"
+        :class="[$route.query.categories == undefined && activeColor ? 'text-white bg-red-600' : 'text-ctextbase']"
         :to="`/blog`"
         >All</router-link
       >
@@ -28,7 +28,7 @@ const categories = ref([]);
     <div v-for="(item, index) in categories" :key="index" class="p-1">
       <router-link
         class="category-button"
-        :class="[item.id == $route.query.categories && activeColor ? 'bg-red-500' : 'bg-black']"
+        :class="[item.id == $route.query.categories && activeColor ? 'text-white bg-red-600' : 'text-ctextbase']"
         :to="`/blog/?categories=${item.id}`"
         >{{ item.name }}</router-link
       >
@@ -38,6 +38,7 @@ const categories = ref([]);
 
 <style>
 .category-button {
-  @apply rounded-xl shadow-lg flex justify-center px-3 py-2 hover:scale-[1.05] transition duration-500 text-white;
+  @apply rounded-xl shadow-custom1 flex justify-center px-3 py-2 hover:scale-[1.05] transition duration-500 border;
+  /* @apply rounded-xl shadow-custom1 flex justify-center px-3 py-2 hover:scale-[1.05] transition duration-500 text-white; */
 }
 </style>

@@ -30,24 +30,24 @@ const introduction = ref("");
         <div
           id="introduction"
           v-html="introduction"
-          class="flex flex-col justify-center prose text-[14px] text-black"
+          class="flex flex-col justify-center prose text-[14px] text-ctextbase"
         ></div>
       </div>
     </Card>
 
     <Card label="Experiences">
-      <div v-for="(item, index) in experiences" :key="index" class="py-5">
+      <div v-for="(item, index) in experiences" :key="index" class="py-3">
         <div class="grid grid-cols-1 lg:grid-cols-[200px_auto]">
           <div class="opacity-75">
             {{ item.date }}
           </div>
           <div>
             <span class="block font-bold">{{ item.company }}</span>
-            <ul>
+            <!-- <ul>
               <li v-for="(job, jobIndex) in item.jobs" :key="jobIndex">
                 &bull; {{ job }}
               </li>
-            </ul>
+            </ul> -->
           </div>
         </div>
       </div>
