@@ -56,6 +56,8 @@ function closeSearchedModal() {
   document.getElementById("searchedPostsModal").classList.toggle("hidden");
   document.getElementById("searchField").focus();
 }
+
+document.title = 'Blog'
 </script>
 
 <template>
@@ -81,7 +83,7 @@ function closeSearchedModal() {
             id="searchField"
             type="text"
             v-model="searchText"
-            placeholder="Search post..."
+            placeholder="Search posts"
             class="grow outline-none bg-[#f2f1ef]"
             @keyup.enter="searchPosts()"
           />

@@ -26,10 +26,10 @@ const routes = [
     children: [
       {
         path: "",
-        redirect: (to) => "profile",
+        redirect: (to) => "about",
       },
       {
-        path: "/profile",
+        path: "/about",
         component: Profile,
       },
       {

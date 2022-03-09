@@ -28,11 +28,5 @@
     "link": null,
     "date": "Feb 2016 - Nov 2017",
     "description": "Mobile and Web app for managing, controlling and monitoring devices at home e.g lamp/light, door lock, TV, CCTV, air conditioner, curtain, switch, sensors, etc. It's main features are: Managing, Controlling and monitoring devices, Configuration, User management, Role, Permission, etc."
-  },
-  {
-    "name": "Data Center Management",
-    "link": null,
-    "date": "Jan 2020",
-    "description": "A web application to manage and monitor all things in datacenter, for example: sensors, cooling, UPS, racks, gensets, etc. Some it's features are Dashboard, Reports, Master Data (User, Role, Permission, Config)."
   }
 ]

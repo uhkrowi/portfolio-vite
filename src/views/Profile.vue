@@ -14,17 +14,21 @@ const introduction = ref("");
   const text = await res.text();
   introduction.value = marked.parse(text);
 })();
+
+document.title = "About | Nurul Uhkrowi";
 </script>
 
 <template>
   <div class="grid gap-[30px]">
+    <div id="disini"></div>
     <!-- <Card label="Hi, I'm Nurul"> -->
-    <Card label="Hi 👋">
+    <Card class="">
       <div class="grid grid-cols-1 lg:grid-cols-[200px_auto] gap-5 lg:gap-0">
         <div class="flex justify-center">
           <img
+            id="img-profile"
             src="/images/profile.jpg"
-            class="w-[120px] h-[120px] rounded-full shadow-md"
+            class="w-[100px] h-[100px] rounded-full shadow-custom2"
           />
         </div>
         <div
@@ -53,11 +57,13 @@ const introduction = ref("");
       </div>
     </Card>
 
-    <Card label="Stacks">
+    <Card label="Waepons">
       <div class="grid grid-cols-1 lg:grid-cols-[200px_auto]">
         <div></div>
         <div class="grid grid-cols-2 gap-y-5">
-          <div v-for="(item, index) in skills" :key="index">{{ item }}</div>
+          <div v-for="(item, index) in skills" :key="index">
+            {{ item.label }}
+          </div>
         </div>
       </div>
     </Card>
@@ -75,9 +81,7 @@ const introduction = ref("");
               >{{ item.name }}</span
             >
           </div>
-          <span class="block opacity-75 text-xs py-2">{{
-            item.date
-          }}</span>
+          <span class="block opacity-75 text-xs py-2">{{ item.date }}</span>
           <span class="block">{{ item.description }}</span>
         </div>
       </div>
@@ -96,7 +100,7 @@ const introduction = ref("");
         <a href="mailto:uhkrowi@gmail.com" class="flex contact-container">
           <div class="flex items-start mr-3">
             <img
-              src="https://img.icons8.com/ios/1x/mail.png"
+              src="https://img.icons8.com/fluency-systems-regular/2x/new-post.png"
               alt="mail"
               class="w-[25px]"
             />

@@ -2,7 +2,7 @@
 const menus = [
   {
     label: "Who's Nurul?",
-    link: "/profile",
+    link: "/about",
   },
   {
     label: "Showcase",

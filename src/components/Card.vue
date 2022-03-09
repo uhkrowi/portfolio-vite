@@ -11,7 +11,9 @@ const { label } = defineProps({
     class="w-full py-[20px] md:px-[10px] lg:px-[50px]"
   >
     <h2 v-if="label" class="text-2xl pb-10">
-      <span class="w-5 bg-red-500 rounded-md">&nbsp;</span>&nbsp; {{ label }}
+      <div>{{ label }}</div>
+      <!-- <span class="w-5 bg-red-500 rounded-md">&nbsp;</span>&nbsp;  -->
+      <div class="h-1 w-10 mt-2 bg-red-500 rounded-md">&nbsp;</div>
     </h2>
     <slot name="default"></slot>
   </div>

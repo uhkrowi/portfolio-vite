@@ -1,17 +1,62 @@
 [
-  "Go lang",
-  "GoFiber",
-  "Javascript",
-  "NodeJS",
-  "Express.js",
-  "React.js",
-  "Vue.js",
-  "MySQL",
-  "PostgreSQL",
-  "Mongo DB",
-  "Wordpress",
-  "Heroku",
-  "Netlify",
-  "Microsoft Azure",
-  "Twilio"
+  {
+    "showOnCV": true, 
+    "label": "Go"
+  },
+  {
+    "showOnCV": false, 
+    "label": "GoFiber"
+  },
+  {
+    "showOnCV": true, 
+    "label": "Javascript"
+  },
+  {
+    "showOnCV": true, 
+    "label": "NodeJS"
+  },
+  {
+    "showOnCV": false,
+    "label": "Express.js"
+  },
+  {
+    "showOnCV": true, 
+    "label": "React.js"
+  },
+  {
+    "showOnCV": true, 
+    "label": "Vue.js"
+  },
+  {
+    "showOnCV": true, 
+    "label": "MySQL"
+  },
+  {
+    "showOnCV": true, 
+    "label": "PostgreSQL"
+  },
+  {
+    "showOnCV": true, 
+    "label": "MongoDB"
+  },
+  {
+    "showOnCV": true, 
+    "label": "Wordpress"
+  },
+  {
+    "showOnCV": false, 
+    "label": "Heroku"
+  },
+  {
+    "showOnCV": false, 
+    "label": "Netlify"
+  },
+  {
+    "showOnCV": true, 
+    "label": "Microsoft Azure"
+  },
+  {
+    "showOnCV": false, 
+    "label": "Twilio"
+  }
 ]

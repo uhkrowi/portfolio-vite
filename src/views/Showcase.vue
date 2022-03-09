@@ -14,6 +14,8 @@ const content = ref(null);
   );
   const json = await res.json();
   content.value = json;
+
+  document.title = `Showcase | ${content.value.title.rendered}`
 })();
 </script>
 

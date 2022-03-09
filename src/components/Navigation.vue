@@ -1,8 +1,10 @@
 <script setup>
+import downloadCV from "@/helper/downloadCV";
+
 const menus = [
   {
     label: "About",
-    link: "/#/profile",
+    link: "/#/about",
     icon: "https://img.icons8.com/fluency-systems-regular/2x/user.png",
   },
   {
@@ -13,13 +15,15 @@ const menus = [
   {
     label: "Blog",
     link: "/#/blog",
-    icon: "https://img.icons8.com/fluency-systems-regular/2x/regular-document.png",
+    icon: "https://img.icons8.com/fluency-systems-regular/2x/term.png",
   },
   {
     label: "Download My CV",
     link: "https://cand-data.kalibrr.com/www.kalibrr.com/profile/52H6XMQG544PBP8NH7YS6MXQUDR6F8HPFKT322HM-6225cab4.pdf",
     icon: "https://img.icons8.com/fluency-systems-regular/2x/download-2.png",
-    newTab: true,
+    // newTab: true,
+    downloadable: true,
+    downloadAction: downloadCV,
   },
   // {
   //   label: "Service",
@@ -44,6 +48,14 @@ const socials = [
   //   icon: "https://img.icons8.com/external-tal-revivo-bold-tal-revivo/2x/external-upwork-a-global-freelancing-platform-where-professionals-connect-and-collaborate-remotely-logo-bold-tal-revivo.png",
   //   link: "https://www.upwork.com/freelancers/~01cf4ab7394043e0f3",
   // },
+  // {
+  //   icon: "https://img.icons8.com/fluency-systems-regular/2x/new-post.png",
+  //   link: "/"
+  // },
+  {
+    icon: "https://img.icons8.com/fluency-systems-regular/2x/telegram-app.png",
+    link: "https://t.me/uhkrowi",
+  },
 ];
 
 const toggleNavigation = () => {
@@ -54,7 +66,8 @@ const toggleNavigation = () => {
 
 function hideNavigation() {
   const navigationEl = document.getElementById("navigation");
-  navigationEl.classList.toggle("hidden");
+  navigationEl.classList.add("hidden");
+  navigationEl.classList.remove("fixed");
 }
 </script>
 
@@ -129,10 +142,13 @@ function hideNavigation() {
       <div class="nav-container lg:shadow-custom1">
         <div v-for="(item, index) in menus" :key="index" class="menu-label">
           <a
-            :href="item.link"
+            :href="item.downloadable ? 'javascript:void(0)' : item.link"
             :target="item.newTab ? '_blank' : '_self'"
             class="menu-label cursor-pointer"
-            @click="hideNavigation()"
+            @click="
+              hideNavigation();
+              item.downloadAction();
+            "
           >
             <img :src="item.icon" class="w-5 h-5 opacity-[80%]" />
             <div class="menu-desc">{{ item.label }}</div>
@@ -152,7 +168,7 @@ function hideNavigation() {
             target="_blank"
             class="w-[40px] h-[40px] flex justify-center items-center hover:bg-[#f2f1ef] rounded-xl cursor-pointer"
           >
-            <img :src="item.icon" alt="" class="m-2 h-5 opacity-[80%]" />
+            <img :src="item.icon" alt="" class="m-2 h-5 opacity-[.75]" />
           </a>
         </div>
 

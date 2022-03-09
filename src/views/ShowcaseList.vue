@@ -11,6 +11,8 @@ const showcases = ref([]);
   const data = await res.json();
   showcases.value = data;
 })();
+
+document.title = 'Showcase'
 </script>
 
 <template>
