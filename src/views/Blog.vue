@@ -1,10 +1,8 @@
 <script setup>
 import Card from "@/components/Card.vue";
 import CategoryButtons from "@/components/CategoryButtons.vue";
-
 import { ref } from "vue";
-import { useRoute, useRouter } from "vue-router";
-// import dayjs from "dayjs";
+import { useRoute } from "vue-router";
 
 const $route = useRoute();
 
@@ -17,7 +15,7 @@ const content = ref(null);
   const json = await res.json();
   content.value = json;
 
-  document.title = `Blog | ${content.value.title.rendered}`
+  document.title = `Blog | ${content.value.title.rendered}`;
 })();
 </script>
 
@@ -38,10 +36,11 @@ const content = ref(null);
         </div> -->
       </div>
       <hr class="my-10 bg-gray-400" />
-      <div class="prose prose-zinc prose-xl">
+      <div class="prose prose-lg">
+      <!-- <div class="prose prose-lg"> -->
         <div
           v-html="content.content.rendered"
-          class="text-[14px] blog-content text-ctextbase"
+          class="blog-content text-ctextbase"
         ></div>
       </div>
       <div class="pt-16">

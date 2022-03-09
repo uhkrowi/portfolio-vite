@@ -1,5 +1,4 @@
 import pdfMake from "pdfmake/build/pdfmake";
-// import pdfFonts from "pdfmake/build/vfs_fonts";
 import experiences from "@/assets/data/experiences.json";
 import educations from "@/assets/data/educations.json";
 import projects from "@/assets/data/projects.json";
@@ -8,13 +7,11 @@ import interests from "@/assets/data/interests.json";
 import personalStatement from "@/assets/data/personal-statement.json";
 
 pdfMake.fonts = {
-  Roboto: {
-    normal: window.location.origin + "/fonts/Inter-Regular.ttf",
-    bold: window.location.origin + "/fonts/Inter-Bold.ttf",
+  Inter: {
+    normal: window.location.origin + "/fonts/Inter-Regular.otf",
+    bold: window.location.origin + "/fonts/Inter-Bold.otf",
   },
 };
-
-// pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -155,7 +152,6 @@ var dd = {
                 "uhkrowi.github.io",
               ],
             },
-            // "",
             {
               image: "profile",
               width: 60,
@@ -168,7 +164,6 @@ var dd = {
     "\n",
     "\n",
     getSectionLabel("WORK EXPERIENCE"),
-    // { text: "", style: ["textBlue"] },
     generatedExperienceTable,
     getSectionLabel("EDUCATION"),
     generatedEducationTable,
@@ -190,9 +185,6 @@ var dd = {
       fontSize: 18,
       bold: true,
     },
-    quote: {
-      italics: true,
-    },
     small: {
       fontSize: 10,
     },
@@ -205,8 +197,7 @@ var dd = {
   },
   defaultStyle: {
     fontSize: 10,
-    // fontWeight: "200",
-    font: "Roboto",
+    font: "Inter",
   },
   images: {
     profile: "",

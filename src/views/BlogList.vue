@@ -3,8 +3,7 @@ import Card from "@/components/Card.vue";
 import CategoryButtons from "@/components/CategoryButtons.vue";
 
 import { ref, watch } from "vue";
-// import dayjs from "dayjs";
-import { useRoute, useRouter } from "vue-router";
+import { useRoute } from "vue-router";
 
 const $route = useRoute();
 

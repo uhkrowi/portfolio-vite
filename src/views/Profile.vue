@@ -2,10 +2,9 @@
 import Card from "@/components/Card.vue";
 import experiences from "@/assets/data/experiences.json";
 import projects from "@/assets/data/projects.json";
-// import certificates from "@/assets/data/certificates.json";
 import skills from "@/assets/data/skills.json";
 
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 import { marked } from "marked";
 
 const introduction = ref("");
@@ -20,8 +19,6 @@ document.title = "About | Nurul Uhkrowi";
 
 <template>
   <div class="grid gap-[30px]">
-    <div id="disini"></div>
-    <!-- <Card label="Hi, I'm Nurul"> -->
     <Card class="">
       <div class="grid grid-cols-1 lg:grid-cols-[200px_auto] gap-5 lg:gap-0">
         <div class="flex justify-center">
@@ -34,7 +31,7 @@ document.title = "About | Nurul Uhkrowi";
         <div
           id="introduction"
           v-html="introduction"
-          class="flex flex-col justify-center prose text-[14px] text-ctextbase"
+          class="flex flex-col justify-center prose text-ctextbase"
         ></div>
       </div>
     </Card>
@@ -72,14 +69,13 @@ document.title = "About | Nurul Uhkrowi";
       <div class="grid grid-cols-1 gap-10">
         <div v-for="(item, index) in projects" :key="index">
           <div>
-            <span
-              class="font-bold"
-              :class="[
-                item.link !== null &&
-                  'text-blue-700 cursor-pointer hover:underline',
-              ]"
-              >{{ item.name }}</span
+            <a
+              v-if="item.link"
+              :href="item.link"
+              class="font-bold text-blue-700 cursor-pointer hover:underline"
+              >{{ item.name }}</a
             >
+            <span v-else class="font-bold">{{ item.name }}</span>
           </div>
           <span class="block opacity-75 text-xs py-2">{{ item.date }}</span>
           <span class="block">{{ item.description }}</span>

@@ -18,7 +18,7 @@ const menus = [
     icon: "https://img.icons8.com/fluency-systems-regular/2x/term.png",
   },
   {
-    label: "Download My CV",
+    label: "Get My CV",
     link: "https://cand-data.kalibrr.com/www.kalibrr.com/profile/52H6XMQG544PBP8NH7YS6MXQUDR6F8HPFKT322HM-6225cab4.pdf",
     icon: "https://img.icons8.com/fluency-systems-regular/2x/download-2.png",
     // newTab: true,
@@ -147,12 +147,12 @@ function hideNavigation() {
             class="menu-label cursor-pointer"
             @click="
               hideNavigation();
-              item.downloadAction();
+              item.downloadable && item.downloadAction();
             "
           >
             <img :src="item.icon" class="w-5 h-5 opacity-[80%]" />
-            <div class="menu-desc">{{ item.label }}</div>
-            <div class="menu-desc-popup">
+            <div class="menu-desc text-[16px]">{{ item.label }}</div>
+            <div class="menu-desc-popup text-[16px]">
               <div>{{ item.label }}</div>
             </div>
           </a>

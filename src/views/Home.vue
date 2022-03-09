@@ -1,6 +1,5 @@
 <script setup>
 import Navigation from "@/components/Navigation.vue";
-import { setBlockTracking } from "vue";
 
 function toggleNavMode() {
   document.getElementById("nav1").classList.toggle("nav-min");
@@ -11,13 +10,11 @@ function toggleNavMode() {
 </script>
 
 <template>
-  <!-- <div class="w-full grid grid-cols-1 lg:grid-cols-[265px_auto] gap-[10px] lg:gap-[10px]"> -->
   <div class="w-full grid grid-cols-1 lg:grid-cols-[auto_1fr]">
     <div id="nav1" class="fixed nav-min lg:top-[100px]" style="z-index: 999">
       <Navigation @toggleNavMode="toggleNavMode" />
     </div>
     <div id="nav2" class="nav-min"></div>
-    <!-- <div class="w-full h-64 bg-red-300"></div> -->
     <router-view class="mt-20 lg:mt-0 lg:pt-[67px]" style="z-index: 997"></router-view>
   </div>
 </template>
@@ -70,7 +67,7 @@ function toggleNavMode() {
 }
 
 .nav-max {
-  @apply w-[255px];
+  @apply w-[220px];
 
   #toggle {
     @apply justify-end;
