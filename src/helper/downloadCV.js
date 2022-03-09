@@ -1,5 +1,5 @@
 import pdfMake from "pdfmake/build/pdfmake";
-import pdfFonts from "pdfmake/build/vfs_fonts";
+// import pdfFonts from "pdfmake/build/vfs_fonts";
 import experiences from "@/assets/data/experiences.json";
 import educations from "@/assets/data/educations.json";
 import projects from "@/assets/data/projects.json";
@@ -7,7 +7,14 @@ import skills from "@/assets/data/skills.json";
 import interests from "@/assets/data/interests.json";
 import personalStatement from "@/assets/data/personal-statement.json";
 
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
+pdfMake.fonts = {
+  Roboto: {
+    normal: window.location.origin + "/fonts/Inter-Regular.ttf",
+    bold: window.location.origin + "/fonts/Inter-Bold.ttf",
+  },
+};
+
+// pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -199,6 +206,7 @@ var dd = {
   defaultStyle: {
     fontSize: 10,
     // fontWeight: "200",
+    font: "Roboto",
   },
   images: {
     profile: "",
