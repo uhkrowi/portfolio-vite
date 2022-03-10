@@ -1,11 +1,11 @@
 <template>
   <div class="flex justify-center p-[15px] lg:p-[50px] text-[#08102b]">
-    <router-view id="myDiv" class="max-w-[900px]" />
+    <router-view id="myDiv" class="max-w-[800px]" />
   </div>
 </template>
 
 <style>
-@import url("../public/css/chalk.min.css");
+@import url("../public/css/github-dark.min.css");
 /* @import url("../public/css/dirtysea.min.css"); */
 /* @import url("../public/css/lioshi.min.css"); */
 
@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   background: white;
 }
 
@@ -41,7 +41,7 @@ body {
 }
 
 pre {
-  background-color: #303030 !important;
+  background-color: #22272e !important;
 }
 
 .shcb-language {
