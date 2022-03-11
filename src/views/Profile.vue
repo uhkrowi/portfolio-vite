@@ -3,6 +3,7 @@ import Card from "@/components/Card.vue";
 import experiences from "@/assets/data/experiences.json";
 import projects from "@/assets/data/projects.json";
 import skills from "@/assets/data/skills.json";
+import contacts from "@/assets/data/contacts.json";
 
 import { ref } from "vue";
 import { marked } from "marked";
@@ -92,18 +93,20 @@ document.title = "About | Nurul Uhkrowi";
     </Card> -->
 
     <Card label="Shoot a message">
-      <div class="grid grid-cols-3 gap-10">
-        <a href="mailto:uhkrowi@gmail.com" class="flex contact-container">
+      <div class="grid grid-cols-2 gap-10">
+        <a
+          v-for="(item, index) in contacts.filter((x) => x.onProfile == true)"
+          :key="index"
+          :href="item.url"
+          target="_blank"
+          class="flex contact-container"
+        >
           <div class="flex items-start mr-3">
-            <img
-              src="https://img.icons8.com/fluency-systems-regular/2x/new-post.png"
-              alt="mail"
-              class="w-[25px]"
-            />
+            <img :src="item.iconUrl" :alt="item.label" class="w-[25px]" />
           </div>
           <div>
-            <span class="block font-bold">Email</span>
-            <span class="contact-label">uhkrowi@gmail.com</span>
+            <span class="block font-bold">{{ item.label }}</span>
+            <span class="contact-label">{{ item.displayText }}</span>
           </div>
         </a>
       </div>

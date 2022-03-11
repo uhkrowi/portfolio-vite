@@ -6,17 +6,16 @@
 
 <style>
 @import url("../public/css/github-dark.min.css");
-/* @import url("../public/css/dirtysea.min.css"); */
-/* @import url("../public/css/lioshi.min.css"); */
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Segoe UI";
   /* src: url("../public/fonts/Inter-Regular.ttf") format("truetype"); */
-  src: url("/fonts/Inter-Regular.otf") format("opentype");
+  /* src: url("/fonts/Inter-Regular.otf") format("opentype"); */
+  src: url("/fonts/Segoe UI.ttf") format("truetype");
 }
 
 body {
-  font-family: Inter, sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background: white;
 }
 

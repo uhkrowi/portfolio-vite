@@ -15,7 +15,7 @@ const content = ref(null);
   const json = await res.json();
   content.value = json;
 
-  document.title = `Showcase | ${content.value.title.rendered}`
+  document.title = `Showcase | ${content.value.title.rendered}`;
 })();
 </script>
 
@@ -26,9 +26,9 @@ const content = ref(null);
       <div class="w-full text-center mb-5 text-sm text-gray-500 font-bold">
         <div class="text-4xl text-gray-900">{{ content.title.rendered }}</div>
       </div>
-      <hr class="my-10">
-      <div class="prose prose-zinc prose-xl text-black">
-        <div v-html="content.content.rendered" class="text-sm"></div>
+      <hr class="my-10" />
+      <div class="prose prose-lg text-black">
+        <div v-html="content.content.rendered" class="text-[16px]"></div>
       </div>
     </div>
   </Card>

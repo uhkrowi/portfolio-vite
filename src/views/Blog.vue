@@ -36,10 +36,9 @@ const content = ref(null);
         </div> -->
       </div>
       <hr class="my-10 bg-gray-400" />
-      <div
-        v-html="content.content.rendered"
-        class="blog-content text-ctextbase prose"
-      ></div>
+      <div class="text-ctextbase prose prose-lg">
+        <div v-html="content.content.rendered" class="text-[16px]"></div>
+      </div>
       <div class="pt-16">
         <div class="flex justify-center">
           <span class="text-lg px-3 py-2">Browse By Topic</span>

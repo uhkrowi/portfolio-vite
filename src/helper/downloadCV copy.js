@@ -13,30 +13,73 @@ pdfMake.fonts = {
   },
 };
 
-const getBase64FromUrl = async (img) => {
+// const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const getBase64FromUrl = async (url) => {
+  let iemge = new Image();
+  iemge.src = url;
+
+  // let isImageLoaded = false;
+
+  // iemge.onload = () => {
+  //   isImageLoaded = true;
+  //   alert(isImageLoaded)
+  // };
+
+  // await new Promise((resolve) => {
+  //   while (true) {
+  //     if (isImageLoaded) {
+  //       resolve();
+  //     }
+  //   }
+  // });
+  // while(!isImageLoaded) {
+
+  // }
+  // );
+
+  // const iemge = document.getElementById("img-profile");
+  // iemge.onloadeddata
+  // await delay(1000);
+
   const canvas = document.createElement("canvas");
   // Set width and height
   canvas.width = 100;
   canvas.height = 100;
   let ctx = canvas.getContext("2d");
 
-  // background color
   ctx.fillStyle = "white";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.save();
-
-  // cropping
   ctx.beginPath();
   ctx.arc(50, 50, 50, 0, Math.PI * 2, true);
   ctx.closePath();
   ctx.clip();
 
-  ctx.drawImage(img, 0, 0, 100, 100);
+  ctx.drawImage(iemge, 0, 0, 100, 100);
 
   ctx.restore();
 
   return canvas.toDataURL("image/jpeg");
 };
+
+// const getBase64FromUrl = async (url) => {
+//   const data = await fetch(url);
+//   const blob = await data.blob();
+//   return new Promise((resolve) => {
+//     const reader = new FileReader();
+//     reader.readAsDataURL(blob);
+//     reader.onloadend = () => {
+//       const base64data = reader.result;
+//       resolve(base64data);
+//     };
+//   });
+// };
+
+// async function getImage() {
+//   console.log(await getBase64FromUrl('/images/profile.jpg'))
+// }
+// getImage()
 
 function getSectionLabel(text) {
   return { text, style: ["textBlue", "bold"], margin: [0, 0, 0, 5] };
@@ -184,13 +227,8 @@ var dd = {
 };
 
 async function downloadCV() {
-  const profileImg = new Image();
-  profileImg.src = "/images/profile.jpg";
-
-  profileImg.onload = async () => {
-    dd.images.profile = await getBase64FromUrl(profileImg);
-    pdfMake.createPdf(dd).download("CV - Nurul Uhkrowi - Web Developer");
-  };
+  dd.images.profile = await getBase64FromUrl("/images/profile.jpg");
+  pdfMake.createPdf(dd).download("CV - Nurul Uhkrowi - Web Developer");
 }
 
 export default downloadCV;
