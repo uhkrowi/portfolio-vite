@@ -41,8 +41,8 @@ document.title = "About | Nurul Uhkrowi";
               experiences and learnings.
             </span>
             <br>
-            <span class="block">To check my works, go here. </span>
-            <span class="block">To read my blog posts, go here. </span>
+            <span class="block">To check my works, go <a href="/#/showcase">here</a>. </span>
+            <span class="block">To read my blog posts, go <a href="/#/blog">here</a>. </span>
             <span class="block">Cheers!🍻</span>
           </div>
           <!-- <div

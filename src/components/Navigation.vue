@@ -20,14 +20,25 @@ const menus = [
   },
   {
     label: "CV",
-    link: "/#/download-cv",
-    // link: "/CV - Nurul Uhkrowi - Web Developer.pdf",
+    // link: "/#/download-cv",
+    link: "/CV - Nurul Uhkrowi - Web Developer.pdf",
     icon: "https://img.icons8.com/fluency-systems-regular/2x/download-2.png",
     // newTab: true,
     // downloadable: true,
     // downloadAction: downloadCV,
     // downloadAction: () => {},
+    downloadAttr: "CV - Nurul Uhkrowi - Web Developer.pdf",
   },
+  // {
+  //   label: "CV",
+  //   link: "/#/download-cv",
+  //   // link: "/CV - Nurul Uhkrowi - Web Developer.pdf",
+  //   icon: "https://img.icons8.com/fluency-systems-regular/2x/download-2.png",
+  //   // newTab: true,
+  //   // downloadable: true,
+  //   // downloadAction: downloadCV,
+  //   // downloadAction: () => {},
+  // },
   // {
   //   label: "Service",
   //   link: "/services",
@@ -148,6 +159,7 @@ function hideNavigation() {
             :href="item.downloadable ? 'javascript:void(0)' : item.link"
             :target="item.newTab ? '_blank' : '_self'"
             class="menu-label cursor-pointer"
+            :download="item.downloadAttr"
             @click="
               hideNavigation();
               item.downloadable && item.downloadAction();
