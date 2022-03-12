@@ -20,10 +20,10 @@ const menus = [
   },
   {
     label: "CV",
-    // link: "/#/download-cv",
-    link: "/CV - Nurul Uhkrowi - Web Developer.pdf",
+    link: "/#/download-cv",
+    // link: "/CV - Nurul Uhkrowi - Web Developer.pdf",
     icon: "https://img.icons8.com/fluency-systems-regular/2x/download-2.png",
-    newTab: true,
+    // newTab: true,
     // downloadable: true,
     // downloadAction: downloadCV,
     // downloadAction: () => {},
@@ -121,13 +121,13 @@ function hideNavigation() {
               id="forward"
               src="https://img.icons8.com/material-rounded/72/forward--v1.png"
               alt=""
-              class="transition duration-500"
+              class="transition duration-500 h-5 w-5"
             />
             <img
               id="back"
               src="https://img.icons8.com/material-rounded/72/back--v1.png"
               alt=""
-              class="transition duration-500"
+              class="transition duration-500 h-5 w-5"
             />
           </div>
           <!-- <svg
