@@ -31,17 +31,14 @@ const content = ref(null);
             content._embedded["wp:term"][0].map((x) => x.name).join(", ")
           }}</span>
         </div>
-        <!-- <div class="mt-5 opacity-50">
-          Published {{ dayjs(content.date).format("MMM DD YYYY") }}
-        </div> -->
       </div>
       <hr class="my-10 bg-gray-400" />
-      <div class="text-ctextbase prose prose-lg">
-        <div v-html="content.content.rendered" class="text-[16px]"></div>
+      <div class="text-ctextbase prose prose-xl">
+        <div v-html="content.content.rendered" class="text-[18px]"></div>
       </div>
       <div class="pt-16">
         <div class="flex justify-center">
-          <span class="text-lg px-3 py-2">Browse By Topic</span>
+          <span class="text-lg px-3 py-2 font-bold">Browse By Topic</span>
         </div>
         <div class="flex justify-center pt-2">
           <CategoryButtons></CategoryButtons>

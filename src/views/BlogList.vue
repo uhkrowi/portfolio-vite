@@ -56,15 +56,15 @@ function closeSearchedModal() {
   document.getElementById("searchField").focus();
 }
 
-document.title = 'Blog'
+document.title = "Blog";
 </script>
 
 <template>
   <Card label="Blog">
-    <div class="w-full flex justify-end pb-5">
+    <div class="w-full flex justify-end pb-5" style="z-index: 9999">
       <div class="relative">
         <div
-          class="flex items-center max-w-64 bg-white rounded-xl p-3 overflow-none bg-[#f2f1ef]"
+          class="flex items-center max-w-64 bg-white rounded-xl p-2 overflow-none bg-[#f2f1ef]"
         >
           <svg
             fill="#777985"
@@ -82,15 +82,16 @@ document.title = 'Blog'
             id="searchField"
             type="text"
             v-model="searchText"
+            autocomplete="off"
             placeholder="Search posts"
-            class="grow outline-none bg-[#f2f1ef]"
+            class="grow outline-none bg-[#f2f1ef] text-[16px]"
             @keyup.enter="searchPosts()"
           />
         </div>
 
         <div
           id="searchedPostsModal"
-          class="hidden absolute bg-white rounded-lg shadow-lg mt-5 py-3 w-[300px] outline-none"
+          class="hidden absolute bg-white text-[14px] rounded-lg shadow-custom2 border mt-5 py-3 w-[300px] outline-none"
           tabindex="1"
           @blur="closeSearchedModal()"
         >
@@ -115,23 +116,27 @@ document.title = 'Blog'
       <CategoryButtons activeColor></CategoryButtons>
     </div>
 
-    <div v-if="blogs.length === 0" class="text-center mt-5">
+    <div
+      v-if="blogs.length === 0"
+      class="text-center mt-5"
+      style="z-index: 9995"
+    >
       {{ loadContentText }}
     </div>
-    <div v-else class="grid grid-cols-1 mt-5">
+    <div v-else class="grid grid-cols-1 mt-5" style="z-index: 9995">
       <router-link
         v-for="(item, index) in blogs"
         :key="index"
         :to="`/blog/${item.id}`"
         class="cursor-pointer hover:bg-[#f2f1ef]"
       >
-        <div class="md:flex justify-between items-center py-3 md:py-2 md:pt-3 px-3">
+        <div
+          class="md:flex justify-between items-center py-3 md:py-2 md:pt-3 px-3"
+        >
           <span class="block">{{ item.title.rendered }}</span>
-          <div class="text-xs text-right font-bold opacity-75 mt-2 md:mt-0">
-            <span
-              >{{ item._embedded["wp:term"][0].map((x) => x.name).join(", ") }}
-              <!-- | {{ dayjs(item.date).format("MMM DD YYYY") }} -->
-            </span>
+          <div class="text-xs text-right mt-2 md:mt-0">
+          <!-- <div class="text-xs text-right font-bold opacity-75 mt-2 md:mt-0"> -->
+            {{ item._embedded["wp:term"][0].map((x) => x.name).join(", ") }}
           </div>
         </div>
         <div class="border-b border-gray-300 w-full mt-1"></div>

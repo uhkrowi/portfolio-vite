@@ -21,7 +21,7 @@ function toggleNavMode() {
 
 <style lang="scss">
 .nav-min {
-  @apply w-[100px];
+  @apply w-[90px];
 
   #toggle {
     @apply justify-center;
@@ -55,6 +55,12 @@ function toggleNavMode() {
 
   .nav-container {
     @apply mt-24 lg:mt-0 py-5 px-5 lg:px-3 flex flex-col justify-center items-center lg:justify-center lg:items-center rounded-xl lg:border;
+  
+    #nav-button {
+      #back {
+        @apply hidden;
+      }
+    }
   }
 
   #socials {
@@ -87,6 +93,12 @@ function toggleNavMode() {
 
   .nav-container {
     @apply py-5 px-3 flex flex-col justify-start items-start rounded-xl border;
+
+    #nav-button {
+      #forward {
+        @apply hidden;
+      }
+    }
   }
 
   #socials {

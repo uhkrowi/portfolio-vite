@@ -1,5 +1,5 @@
 <script setup>
-import downloadCV from "@/helper/downloadCV";
+// import downloadCV from "@/helper/downloadCV";
 import contacts from "@/assets/data/contacts.json";
 
 const menus = [
@@ -19,12 +19,14 @@ const menus = [
     icon: "https://img.icons8.com/fluency-systems-regular/2x/term.png",
   },
   {
-    label: "Get My CV",
-    link: "https://cand-data.kalibrr.com/www.kalibrr.com/profile/52H6XMQG544PBP8NH7YS6MXQUDR6F8HPFKT322HM-6225cab4.pdf",
+    label: "CV",
+    // link: "/#/download-cv",
+    link: "/CV - Nurul Uhkrowi - Web Developer.pdf",
     icon: "https://img.icons8.com/fluency-systems-regular/2x/download-2.png",
-    // newTab: true,
-    downloadable: true,
-    downloadAction: downloadCV,
+    newTab: true,
+    // downloadable: true,
+    // downloadAction: downloadCV,
+    // downloadAction: () => {},
   },
   // {
   //   label: "Service",
@@ -72,7 +74,7 @@ function hideNavigation() {
       id="navigation"
       class="hidden lg:block bottom-0 top-0 left-0 right-0 bg-white p-4"
     >
-      <div
+      <!-- <div
         class="hidden lg:flex w-10 h-10 justify-center items-center mb-3 shadow-custom1 border rounded-xl cursor-pointer hover:bg-gray-100 select-none"
         @click="$emit('toggleNavMode')"
       >
@@ -87,7 +89,7 @@ function hideNavigation() {
             d="M 5.5 9 A 1.50015 1.50015 0 1 0 5.5 12 L 42.5 12 A 1.50015 1.50015 0 1 0 42.5 9 L 5.5 9 z M 5.5 22.5 A 1.50015 1.50015 0 1 0 5.5 25.5 L 42.5 25.5 A 1.50015 1.50015 0 1 0 42.5 22.5 L 5.5 22.5 z M 5.5 36 A 1.50015 1.50015 0 1 0 5.5 39 L 42.5 39 A 1.50015 1.50015 0 1 0 42.5 36 L 5.5 36 z"
           />
         </svg>
-      </div>
+      </div> -->
 
       <div class="w-full flex justify-end mb-5 lg:hidden">
         <div
@@ -108,7 +110,39 @@ function hideNavigation() {
         </div>
       </div>
 
-      <div class="nav-container lg:shadow-custom1">
+      <div class="nav-container lg:shadow-custom1 relative">
+        <div
+          id="nav-button"
+          class="hidden absolute top-[-15px] right-[-15px] bg-white lg:flex w-8 h-8 justify-center items-center mb-3 shadow-custom1 border rounded-full cursor-pointer hover:bg-gray-100 select-none"
+          @click="$emit('toggleNavMode')"
+        >
+          <div class="p-1 opacity-75">
+            <img
+              id="forward"
+              src="https://img.icons8.com/material-rounded/72/forward--v1.png"
+              alt=""
+              class="transition duration-500"
+            />
+            <img
+              id="back"
+              src="https://img.icons8.com/material-rounded/72/back--v1.png"
+              alt=""
+              class="transition duration-500"
+            />
+          </div>
+          <!-- <svg
+            fill="#000000"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 48 48"
+            width="18px"
+            height="18px"
+          >
+            <path
+              d="M 5.5 9 A 1.50015 1.50015 0 1 0 5.5 12 L 42.5 12 A 1.50015 1.50015 0 1 0 42.5 9 L 5.5 9 z M 5.5 22.5 A 1.50015 1.50015 0 1 0 5.5 25.5 L 42.5 25.5 A 1.50015 1.50015 0 1 0 42.5 22.5 L 5.5 22.5 z M 5.5 36 A 1.50015 1.50015 0 1 0 5.5 39 L 42.5 39 A 1.50015 1.50015 0 1 0 42.5 36 L 5.5 36 z"
+            />
+          </svg> -->
+        </div>
+
         <div v-for="(item, index) in menus" :key="index" class="menu-label">
           <a
             :href="item.downloadable ? 'javascript:void(0)' : item.link"
@@ -144,7 +178,8 @@ function hideNavigation() {
         </div>
 
         <div id="copyright" class="mt-5 w-full">
-          <span class="text-xs">&copy; 2022 Uhkrowi | Indonesia</span>
+          <span class="block text-sm">&copy; 2022 Uhkrowi</span>
+          <span class="block text-sm">Indonesia</span>
         </div>
       </div>
     </div>

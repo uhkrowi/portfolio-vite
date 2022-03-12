@@ -5,15 +5,16 @@ import projects from "@/assets/data/projects.json";
 import skills from "@/assets/data/skills.json";
 import contacts from "@/assets/data/contacts.json";
 
-import { ref } from "vue";
-import { marked } from "marked";
+// import { ref } from "vue";
+// import { marked } from "marked";
 
-const introduction = ref("");
-(async () => {
-  const res = await fetch("./data/introduction.md");
-  const text = await res.text();
-  introduction.value = marked.parse(text);
-})();
+// const introduction = ref("");
+// (async () => {
+//   const res = await fetch("./data/introduction.md");
+//   const text = await res.text();
+//   // introduction.value = text;
+// introduction.value = marked.parse(text);
+// })();
 
 document.title = "About | Nurul Uhkrowi";
 </script>
@@ -29,22 +30,38 @@ document.title = "About | Nurul Uhkrowi";
             class="w-[100px] h-[100px] rounded-full shadow-custom2"
           />
         </div>
-        <div
-          id="introduction"
-          v-html="introduction"
-          class="flex flex-col justify-center prose text-ctextbase"
-        ></div>
+        <div class="w-full md:flex md:justify-center">
+          <div class="prose text-ctextbase text-[18px] md:w-[60%] lg:w-full">
+            <span class="block">Hi, I'm Nurul,</span>
+            <span class="block">
+              I'm currently working as a freelance web developer.
+            </span>
+            <span class="block">
+              This site is where I show my works and share some of my
+              experiences and learnings.
+            </span>
+            <br>
+            <span class="block">To check my works, go here. </span>
+            <span class="block">To read my blog posts, go here. </span>
+            <span class="block">Cheers!🍻</span>
+          </div>
+          <!-- <div
+            id="introduction"
+            v-html="introduction"
+            class="prose text-ctextbase text-[18px] md:w-[60%] lg:w-full"
+          ></div> -->
+        </div>
       </div>
     </Card>
 
     <Card label="Experiences">
       <div v-for="(item, index) in experiences" :key="index" class="py-3">
         <div class="grid grid-cols-1 lg:grid-cols-[200px_auto]">
-          <div class="opacity-75">
+          <div class="opacity-[.7]">
             {{ item.date }}
           </div>
           <div>
-            <span class="block font-bold">{{ item.company }}</span>
+            <span class="block">{{ item.company }}</span>
             <!-- <ul>
               <li v-for="(job, jobIndex) in item.jobs" :key="jobIndex">
                 &bull; {{ job }}
@@ -78,7 +95,9 @@ document.title = "About | Nurul Uhkrowi";
             >
             <span v-else class="font-bold">{{ item.name }}</span>
           </div>
-          <span class="block opacity-75 text-xs py-2">{{ item.date }}</span>
+          <span class="block opacity-[.7] text-normal py-2">{{
+            item.date
+          }}</span>
           <span class="block">{{ item.description }}</span>
         </div>
       </div>

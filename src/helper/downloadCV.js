@@ -1,4 +1,4 @@
-import pdfMake from "pdfmake/build/pdfmake";
+import pdfMake from "pdfmake/build/pdfmake.min";
 import experiences from "@/assets/data/experiences.json";
 import educations from "@/assets/data/educations.json";
 import projects from "@/assets/data/projects.json";
@@ -8,8 +8,8 @@ import personalStatement from "@/assets/data/personal-statement.json";
 
 pdfMake.fonts = {
   Inter: {
-    normal: window.location.origin + "/fonts/Inter-Regular.otf",
-    bold: window.location.origin + "/fonts/Inter-Bold.otf",
+    normal: window.location.origin + "/fonts/Spectral-Regular.ttf",
+    bold: window.location.origin + "/fonts/Spectral-Bold.ttf",
   },
 };
 
@@ -122,13 +122,14 @@ var dd = {
                 {
                   text: "Nurul Uhkrowi",
                   style: "header",
-                },
-                "\n",
-                {
-                  text: "t.me/uhkrowi | uhkrowi@gmail.com",
                   margin: [0, 0, 0, 3],
                 },
-                "uhkrowi.github.io",
+                // "\n",
+                {
+                  text: "t.me/uhkrowi | uhkrowi@gmail.com | uhkrowi.github.io",
+                  // margin: [0, 0, 0, 3],
+                },
+                // "uhkrowi.github.io",
               ],
             },
             {
@@ -140,13 +141,12 @@ var dd = {
       },
       layout: "noBorders",
     },
-    "\n",
-    "\n",
+    // "\n",
     getSectionLabel("WORK EXPERIENCE"),
     generatedExperienceTable,
+    // { text: "", pageBreak: "before" },
     getSectionLabel("EDUCATION"),
     generatedEducationTable,
-    { text: "", pageBreak: "before" },
     getSectionLabel("SKILL"),
     generatedSkillTable,
     "\n",

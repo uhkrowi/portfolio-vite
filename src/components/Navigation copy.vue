@@ -109,7 +109,7 @@ const toggleNavigation = () => {
           </div>
         </div>
         <!-- <div class="flex justify-center lg:justify-start"> -->
-        <span class="block mt-5 text-xs text-center lg:text-left text-[#bbb]"
+        <span class="block mt-5 text-center lg:text-left text-[#bbb]"
           >&copy; 2022 Uhkrowi | Bogor, Indonesia</span
         >
       </div>

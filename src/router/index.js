@@ -1,22 +1,15 @@
 // import { createRouter, createWebHistory } from "vue-router";
 import {
-  createMemoryHistory,
   createRouter,
   createWebHashHistory,
-  createWebHistory,
 } from "vue-router";
-import Home from "@/views/Home.vue";
-import Profile from "@/views/Profile.vue";
-import ShowcaseList from "@/views/ShowcaseList.vue";
-import Showcase from "@/views/Showcase.vue";
-import BlogList from "@/views/BlogList.vue";
-import Blog from "@/views/Blog.vue";
-
-// const createHistory = process.env.SERVER
-//   ? createMemoryHistory
-//   : process.env.VUE_ROUTER_MODE === "history"
-//   ? createWebHistory
-//   : createWebHashHistory;
+const Home = () => import("@/views/Home.vue");
+const Profile = () => import("@/views/Profile.vue");
+const ShowcaseList = () => import("@/views/ShowcaseList.vue");
+const Showcase = () => import("@/views/Showcase.vue");
+const BlogList = () => import("@/views/BlogList.vue");
+const Blog = () => import("@/views/Blog.vue");
+const DownloadCV = () => import("@/views/DownloadCV.vue");
 
 const routes = [
   {
@@ -47,6 +40,10 @@ const routes = [
       {
         path: "blog/:id",
         component: Blog,
+      },
+      {
+        path: "download-cv",
+        component: DownloadCV,
       },
       {
         path: "/:catchAll(.*)*",

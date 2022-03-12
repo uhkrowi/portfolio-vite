@@ -31,7 +31,7 @@ document.title = "Showcase";
           class="w-full h-full overflow-hidden rounded-lg relative lg:shadow-custom2 border flex justify-center"
         >
           <div
-            class="title-container opacity-[0] absolute w-full h-full top-0 left-0 bg-red-500/50 rounded-lg p-5 flex justify-center items-center text-md text-center text-white font-bold"
+            class="title-container opacity-[0] absolute w-full h-full top-0 left-0 bg-red-500/50 rounded-lg p-5 flex justify-center items-center text-center text-white font-bold"
             style="z-index: 999"
           >
             {{ item.title.rendered }}
