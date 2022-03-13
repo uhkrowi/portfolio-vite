@@ -26,13 +26,15 @@ document.title = "About | Nurul Uhkrowi";
         <div class="flex justify-center">
           <img
             id="img-profile"
-            src="/images/profile.jpg"
-            class="w-[100px] h-[100px] rounded-full shadow-custom2"
+            src="/images/profile-1.png"
+            alt="profile image"
+            class="w-[100px] h-[100px] scale-x-[-1]"
           />
+            <!-- class="w-[100px] h-[100px] rounded-full shadow-custom2 scale-x-[-1]" -->
         </div>
         <div class="w-full md:flex md:justify-center">
-          <div class="prose text-ctextbase text-[18px] md:w-[60%] lg:w-full">
-            <span class="block">Hi, I'm Nurul,</span>
+          <div class="prose text-ctextbase text-[19px] md:w-[60%] lg:w-full">
+            <span class="block">Hi, my name's Nurul,</span>
             <span class="block">
               I'm currently working as a freelance web developer.
             </span>

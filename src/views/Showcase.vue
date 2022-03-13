@@ -28,7 +28,7 @@ const content = ref(null);
       </div>
       <hr class="my-10" />
       <div class="prose prose-xl text-black">
-        <div v-html="content.content.rendered" class="text-[18px]"></div>
+        <div v-html="content.content.rendered" class="text-[19px]"></div>
       </div>
     </div>
   </Card>

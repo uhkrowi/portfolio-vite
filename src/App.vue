@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex justify-center p-[15px] lg:p-[50px] text-[#08102b] text-[18px]"
+    class="flex justify-center text-[#08102b] text-[18px] h-screen"
   >
     <router-view id="myDiv" class="max-w-[800px]" />
   </div>
@@ -9,6 +9,8 @@
 <style lang="scss">
 @import url("../public/css/github-dark.min.css");
 // @import url("https://fonts.googleapis.com/css2?family=Spectral&display=swap");
+
+// @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 @font-face {
   font-family: 'Spectral';
@@ -23,7 +25,8 @@
 
 body {
   font-family: "Spectral", sans-serif;
-  background: white;
+  // background: white;
+  @apply bg-gray-200;
 }
 
 /* width */
@@ -48,7 +51,7 @@ body {
 
 pre {
   background-color: #22272e !important;
-  max-width: 500px;
+  // max-width: 500px;
 }
 
 .shcb-language {

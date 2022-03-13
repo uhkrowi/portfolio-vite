@@ -28,13 +28,13 @@ const content = ref(null);
         <div class="mt-5 font-normal flex flex-wrap justify-center items-end">
           <span class="opacity-75">in&nbsp;</span>
           <span>{{
-            content._embedded["wp:term"][0].map((x) => x.name).join(", ")
+            content._embedded["wp:term"][0].map((x) => `#${x.name}`).join(", ")
           }}</span>
         </div>
       </div>
       <hr class="my-10 bg-gray-400" />
       <div class="text-ctextbase prose prose-xl">
-        <div v-html="content.content.rendered" class="text-[18px]"></div>
+        <div v-html="content.content.rendered" class="text-[19px]"></div>
       </div>
       <div class="pt-16">
         <div class="flex justify-center">
