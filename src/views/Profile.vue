@@ -28,7 +28,7 @@ document.title = "About | Nurul Uhkrowi";
             id="img-profile"
             src="/images/profile-1.png"
             alt="profile image"
-            class="w-[100px] h-[100px] scale-x-[-1]"
+            class="w-[100px] h-[100px] scale-x-[-1] rounded-full lg:rounded-none"
           />
             <!-- class="w-[100px] h-[100px] rounded-full shadow-custom2 scale-x-[-1]" -->
         </div>

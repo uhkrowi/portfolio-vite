@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex justify-center text-[#08102b] text-[18px] h-screen"
+    class="flex justify-center text-[#08102b] text-[18px] h-screen p-[15px] lg:p-[0px]"
   >
     <router-view id="myDiv" class="max-w-[800px]" />
   </div>
@@ -26,7 +26,7 @@
 body {
   font-family: "Spectral", sans-serif;
   // background: white;
-  @apply bg-gray-200;
+  @apply lg:bg-gray-200;
 }
 
 /* width */

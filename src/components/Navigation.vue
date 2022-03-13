@@ -83,7 +83,7 @@ function hideNavigation() {
 
     <div
       id="navigation"
-      class="hidden lg:block bottom-0 top-0 left-0 right-0 p-4"
+      class="hidden lg:block bottom-0 top-0 left-0 right-0 p-4 bg-white lg:bg-transparent"
     >
       <!-- <div
         class="hidden lg:flex w-10 h-10 justify-center items-center mb-3 shadow-custom1 border rounded-xl cursor-pointer hover:bg-gray-100 select-none"
