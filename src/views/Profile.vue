@@ -113,7 +113,7 @@ document.title = "About | Nurul Uhkrowi";
       </ul>
     </Card> -->
 
-    <Card label="Shoot a message">
+    <Card label="Shoot a message" class="pb-10">
       <div class="grid grid-cols-2 gap-10">
         <a
           v-for="(item, index) in contacts.filter((x) => x.onProfile == true)"

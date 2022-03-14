@@ -15,7 +15,8 @@
 @font-face {
   font-family: 'Spectral';
   // src: url("/fonts/Spectral-Regular.ttf") format("truetype");
-  src: url("https://fonts.gstatic.com/s/spectral/v11/rnCr-xNNww_2s0amA9M5kng.woff2") format("woff2");
+  src: url("/fonts/charter-normal.woff") format("woff");
+  // src: url("https://fonts.gstatic.com/s/spectral/v11/rnCr-xNNww_2s0amA9M5kng.woff2") format("woff2");
 }
 
 // @font-face {
