@@ -1,12 +1,8 @@
 <script setup>
 // import downloadCV from "@/helper/downloadCV";
-// import { useRouter } from "vue-router";
-
-// const $router = useRouter();
-
-// downloadCV();
-// $router.go(-1);
 
 // window.history.back();
+
+// downloadCV(false);
 </script>
 <template>hola</template>

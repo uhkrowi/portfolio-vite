@@ -8,8 +8,8 @@ import personalStatement from "@/assets/data/personal-statement.json";
 
 pdfMake.fonts = {
   Inter: {
-    normal: window.location.origin + "/fonts/Spectral-Regular.ttf",
-    bold: window.location.origin + "/fonts/Spectral-Bold.ttf",
+    normal: window.location.origin + "/fonts/Charter Regular.ttf",
+    bold: window.location.origin + "/fonts/Charter Bold.ttf",
   },
 };
 
@@ -124,44 +124,55 @@ var dd = {
                   style: "header",
                   margin: [0, 0, 0, 3],
                 },
-                // "\n",
                 {
-                  text: "t.me/uhkrowi | uhkrowi@gmail.com | uhkrowi.github.io",
-                  // margin: [0, 0, 0, 3],
+                  text: "Web Developer",
+                  style: "subHeader",
+                  margin: [0, 0, 0, 15],
                 },
-                // "uhkrowi.github.io",
+                {
+                  text: "+628977031387 | uhkrowi@gmail.com",
+                  margin: [0, 0, 0, 3],
+                },
+                {
+                  text: "https://uhkrowi.github.io",
+                },
               ],
             },
-            {
-              image: "profile",
-              width: 60,
-            },
+            // {
+            //   image: "profile",
+            //   width: 60,
+            // },
           ],
         ],
       },
       layout: "noBorders",
     },
-    // "\n",
+    "\n\n",
+    getSectionLabel("PROFILE"),
+    generatedPersonalStatementTable,
+    "\n",
     getSectionLabel("WORK EXPERIENCE"),
     generatedExperienceTable,
-    // { text: "", pageBreak: "before" },
-    getSectionLabel("EDUCATION"),
-    generatedEducationTable,
+    { text: "", pageBreak: "before" },
     getSectionLabel("SKILL"),
     generatedSkillTable,
     "\n",
-    getSectionLabel("INTEREST"),
-    generatedInterestTable,
-    "\n",
-    getSectionLabel("PERSONAL STATEMENT"),
-    generatedPersonalStatementTable,
+    getSectionLabel("EDUCATION"),
+    generatedEducationTable,
     "\n",
     getSectionLabel("PROJECT"),
     generatedProjectTable,
+    // { text: "", pageBreak: "before" },
+    // getSectionLabel("INTEREST"),
+    // generatedInterestTable,
   ],
   styles: {
     header: {
       fontSize: 18,
+      bold: true,
+    },
+    subHeader: {
+      fontSize: 11,
       bold: true,
     },
     small: {
@@ -184,11 +195,11 @@ var dd = {
 };
 
 async function downloadCV() {
-  const profileImg = new Image();
-  profileImg.src = "/images/profile.jpg";
+  // const profileImg = new Image();
+  // profileImg.src = "/images/profile.jpg";
 
   profileImg.onload = async () => {
-    dd.images.profile = await getBase64FromUrl(profileImg);
+    // dd.images.profile = await getBase64FromUrl(profileImg);
     pdfMake.createPdf(dd).download("CV - Nurul Uhkrowi - Web Developer");
   };
 }

@@ -2,31 +2,20 @@
   <div
     class="flex justify-center text-[#08102b] text-[18px] h-screen p-[15px] lg:p-[0px]"
   >
-    <router-view id="myDiv" class="max-w-[800px]" />
+    <router-view class="max-w-[800px]" />
   </div>
 </template>
 
 <style lang="scss">
 @import url("../public/css/github-dark.min.css");
-// @import url("https://fonts.googleapis.com/css2?family=Spectral&display=swap");
-
-// @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 @font-face {
-  font-family: 'Spectral';
-  // src: url("/fonts/Spectral-Regular.ttf") format("truetype");
+  font-family: "Charter";
   src: url("/fonts/charter-normal.woff") format("woff");
-  // src: url("https://fonts.gstatic.com/s/spectral/v11/rnCr-xNNww_2s0amA9M5kng.woff2") format("woff2");
 }
 
-// @font-face {
-//   font-family: "Spectral";
-//   src: url("/fonts/Spectral-Regular.ttf") format("truetype");
-// }
-
 body {
-  font-family: "Spectral", sans-serif;
-  // background: white;
+  font-family: "Charter", sans-serif;
   @apply lg:bg-gray-200;
 }
 

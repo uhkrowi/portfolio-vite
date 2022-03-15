@@ -15,7 +15,7 @@ function toggleNavMode() {
       <Navigation @toggleNavMode="toggleNavMode" />
     </div>
     <div id="nav2" class="nav-min"></div>
-    <router-view class="mt-20 lg:mt-0 lg:pt-[67px] bg-white" style="z-index: 997"></router-view>
+    <router-view class="mt-20 lg:mt-0 lg:pt-[67px] bg-white text-gray-800" style="z-index: 997"></router-view>
   </div>
 </template>
 

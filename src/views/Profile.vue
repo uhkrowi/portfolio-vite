@@ -33,7 +33,7 @@ document.title = "About | Nurul Uhkrowi";
             <!-- class="w-[100px] h-[100px] rounded-full shadow-custom2 scale-x-[-1]" -->
         </div>
         <div class="w-full md:flex md:justify-center">
-          <div class="prose text-ctextbase text-[19px] md:w-[60%] lg:w-full">
+          <div class="prose text-gray-800 text-[19px] md:w-[60%] lg:w-full">
             <span class="block">Hi, my name's Nurul,</span>
             <span class="block">
               I'm currently working as a freelance web developer.
