@@ -73,7 +73,7 @@ function hideNavigation() {
 
     <div
       id="navigation"
-      class="hidden lg:block bottom-0 top-0 left-0 right-0 p-4 bg-white lg:bg-transparent"
+      class="hidden lg:block bottom-0 top-0 left-0 right-0 p-4 bg-white lg:bg-transparent text-[15px]"
     >
       <div class="w-full flex justify-end mb-5 lg:hidden">
         <div

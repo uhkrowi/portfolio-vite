@@ -84,7 +84,7 @@ document.title = "Blog";
             v-model="searchText"
             autocomplete="off"
             placeholder="Search posts"
-            class="grow outline-none bg-[#f2f1ef] text-[16px]"
+            class="grow outline-none bg-[#f2f1ef] text-[15px]"
             @keyup.enter="searchPosts()"
           />
         </div>

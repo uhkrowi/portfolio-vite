@@ -34,16 +34,20 @@ const content = ref(null);
       </div>
       <hr class="my-10 bg-gray-400" />
       <div class="text-gray-800 prose prose-lg">
-        <div v-html="content.content.rendered" class="text-[19px]"></div>
+        <div v-html="content.content.rendered" class="text-[16px]"></div>
       </div>
       <div class="pt-16">
         <div class="flex justify-center">
           <span class="text-lg px-3 py-2 font-bold">Browse By Topic</span>
         </div>
-        <div class="flex justify-center pt-2">
+        <div class="flex justify-center pt-2 pb-5">
           <CategoryButtons></CategoryButtons>
         </div>
       </div>
     </div>
   </Card>
 </template>
+
+<style lang="scss">
+
+</style>
