@@ -1,30 +1,38 @@
 <script setup>
+import contacts from "@/assets/data/contacts.json";
+
 const menus = [
-  // {
-  //   label: "About",
-  //   link: "/#/about",
-  //   // icon: "https://img.icons8.com/fluency-systems-regular/2x/user.png",
-  //   icon: null,
-  // },
+  {
+    label: "About",
+    link: "/#/about",
+    icon: "https://img.icons8.com/fluency-systems-regular/2x/user.png",
+  },
   {
     label: "Showcase",
     link: "/#/showcase",
-    // icon: "https://img.icons8.com/fluency-systems-regular/2x/folder-invoices.png",
-    icon: null,
+    icon: "https://img.icons8.com/fluency-systems-regular/2x/folder-invoices.png",
   },
   {
     label: "Blog",
     link: "/#/blog",
-    // icon: "https://img.icons8.com/fluency-systems-regular/2x/term.png",
-    icon: null,
+    icon: "https://img.icons8.com/fluency-systems-regular/2x/term.png",
   },
   {
-    label: "CV",
+    label: "Download My CV",
+    // link: "/#/download-cv",
     link: "/CV - Nurul Uhkrowi - Web Developer.pdf",
-    // icon: "https://img.icons8.com/fluency-systems-regular/2x/download-2.png",
-    icon: null,
+    icon: "https://img.icons8.com/fluency-systems-regular/2x/download-2.png",
+    // newTab: true,
+    // downloadable: true,
+    // downloadAction: downloadCV,
+    // downloadAction: () => {},
     downloadAttr: "CV - Nurul Uhkrowi - Web Developer.pdf",
   },
+  // {
+  //   label: "Download My CV",
+  //   link: "/#/download-cv",
+  //   icon: "https://img.icons8.com/fluency-systems-regular/2x/download-2.png",
+  // },
 ];
 
 const toggleNavigation = () => {
@@ -41,29 +49,7 @@ function hideNavigation() {
 </script>
 
 <template>
-  <div class="flex">
-    <div v-for="(item, index) in menus" :key="index" class="menu-label">
-      <a
-        :href="item.downloadable ? 'javascript:void(0)' : item.link"
-        :target="item.newTab ? '_blank' : '_self'"
-        class="menu-label cursor-pointer"
-        :download="item.downloadAttr"
-        @click="
-          hideNavigation();
-          item.downloadable && item.downloadAction();
-        "
-      >
-        <img
-          v-if="item.icon"
-          :src="item.icon"
-          :alt="item.label"
-          class="w-5 h-5 opacity-[80%] text-[15px]"
-        />
-        <div v-else class="mx-3 lg:mx-5 hover:underline">{{item.label}}</div>
-      </a>
-    </div>
-  </div>
-  <!-- <div class="relative">
+  <div class="relative">
     <div class="fixed lg:hidden right-0 left-0 top-0 p-4 bg-white border-b">
       <div class="w-full flex justify-end items-center">
         <div
@@ -158,5 +144,5 @@ function hideNavigation() {
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 </template>

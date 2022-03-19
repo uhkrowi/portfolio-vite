@@ -1,5 +1,6 @@
 <script setup>
 import Navigation from "@/components/Navigation.vue";
+import DarkModeToggle from "@/components/DarkModeToggle.vue";
 
 function toggleNavMode() {
   document.getElementById("nav1").classList.toggle("nav-min");
@@ -10,12 +11,20 @@ function toggleNavMode() {
 </script>
 
 <template>
-  <div class="w-full grid grid-cols-1 lg:grid-cols-[auto_1fr]">
-    <div id="nav1" class="fixed nav-min lg:top-[100px]" style="z-index: 999">
-      <Navigation @toggleNavMode="toggleNavMode" />
+  <div class="relative">
+    <div
+      class="fixed h-16 w-full lg:max-w-[700px] navbar flex justify-between items-center px-5 lg:px-2"
+    >
+      <a href="/#/about" class="hover:underline">About</a>
+      <div class="flex">
+        <Navigation @toggleNavMode="toggleNavMode" />
+        <DarkModeToggle class="ml-5" />
+      </div>
     </div>
-    <div id="nav2" class="nav-min"></div>
-    <router-view class="mt-20 lg:mt-0 lg:pt-[67px] bg-white text-gray-800" style="z-index: 997"></router-view>
+    <router-view
+      class="mt-20 lg:mt-0 lg:pt-[100px] w-full lg:max-w-[700px] px-5"
+      style="z-index: 997"
+    ></router-view>
   </div>
 </template>
 
@@ -55,7 +64,7 @@ function toggleNavMode() {
 
   .nav-container {
     @apply mt-24 lg:mt-0 py-5 px-5 lg:px-3 flex flex-col justify-center items-center lg:justify-center lg:items-center rounded-xl lg:border;
-  
+
     #nav-button {
       #back {
         @apply hidden;
@@ -108,5 +117,16 @@ function toggleNavMode() {
   #copyright {
     @apply text-center;
   }
+}
+
+.navbar {
+  // filter: blur(10px);
+  /* From https://css.glass */
+  // background: rgba(255, 255, 255, 0.2);
+  // border-radius: 16px;
+  // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  // border: 1px solid rgba(255, 255, 255, 0.3);
 }
 </style>

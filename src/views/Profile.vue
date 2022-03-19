@@ -5,17 +5,6 @@ import projects from "@/assets/data/projects.json";
 import skills from "@/assets/data/skills.json";
 import contacts from "@/assets/data/contacts.json";
 
-// import { ref } from "vue";
-// import { marked } from "marked";
-
-// const introduction = ref("");
-// (async () => {
-//   const res = await fetch("./data/introduction.md");
-//   const text = await res.text();
-//   // introduction.value = text;
-// introduction.value = marked.parse(text);
-// })();
-
 document.title = "About | Nurul Uhkrowi";
 </script>
 
@@ -28,79 +17,101 @@ document.title = "About | Nurul Uhkrowi";
             id="img-profile"
             src="/images/profile-1.png"
             alt="profile image"
-            class="w-[100px] h-[100px] scale-x-[-1] rounded-full lg:rounded-none"
+            class="w-[100px] h-[100px] rounded-full lg:rounded-none mb-8 lg:mb-0"
           />
-            <!-- class="w-[100px] h-[100px] rounded-full shadow-custom2 scale-x-[-1]" -->
+          <!-- class="w-[100px] h-[100px] rounded-full shadow-custom2 scale-x-[-1]" -->
         </div>
         <div class="w-full md:flex md:justify-center">
-          <div class="prose text-gray-800 text-[16px] md:w-[60%] lg:w-full">
-            <span class="block">Hi, my name's Nurul,</span>
+          <div class="dark:text-white text-[16px] md:w-[60%] lg:w-full">
+            <span class="block">Hi, my name's Nurul.</span>
+            <br>
             <span class="block">
               I'm currently working as a freelance web developer.
             </span>
             <span class="block">
               This site is where I show my works and share some of my
-              experiences and learnings.
+              experiences and learnings about software development and web
+              technology in general.
             </span>
-            <br>
-            <span class="block">To check my works, go <a href="/#/showcase">here</a>. </span>
-            <span class="block">To read my blog posts, go <a href="/#/blog">here</a>. </span>
-            <span class="block">Cheers!🍻</span>
-          </div>
-          <!-- <div
-            id="introduction"
-            v-html="introduction"
-            class="prose text-ctextbase text-[18px] md:w-[60%] lg:w-full"
-          ></div> -->
-        </div>
-      </div>
-    </Card>
-
-    <Card label="Experiences">
-      <div v-for="(item, index) in experiences" :key="index" class="py-3">
-        <div class="grid grid-cols-1 lg:grid-cols-[200px_auto]">
-          <div class="opacity-[.7]">
-            {{ item.date }}
-          </div>
-          <div>
-            <span class="block">{{ item.company }}</span>
-            <!-- <ul>
-              <li v-for="(job, jobIndex) in item.jobs" :key="jobIndex">
-                &bull; {{ job }}
-              </li>
-            </ul> -->
+            <br />
+            <div>
+              You can find me at
+              <a
+                href="https://www.linkedin.com/in/uhkrowi"
+                target="_blank"
+                class="underline"
+                >LinkedIn</a
+              >,
+              <a
+                href="https://facebook.com/uhkrowi"
+                target="_blank"
+                class="underline"
+                >Facebook</a
+              >
+              and
+              <a
+                href="https://github.com/uhkrowi"
+                target="_blank"
+                class="underline"
+                >Github</a
+              >.
+            </div>
           </div>
         </div>
       </div>
     </Card>
 
-    <Card label="Waepons">
-      <div class="grid grid-cols-1 lg:grid-cols-[200px_auto]">
+    <Card label="Experience">
+      <div
+        v-for="(item, index) in experiences"
+        :key="index"
+        class="py-5 border-b dark:border-gray-700"
+      >
+        <div>{{ item.position }}</div>
+        <div
+          class="flex justify-between items-center text-gray-600 dark:text-gray-400 text-[14px]"
+        >
+          <span>{{ item.company }}</span>
+          <span>{{ item.date }}</span>
+        </div>
+        <div class="mt-3 text-[14px]">{{ item.desc }}</div>
+        <div class="mt-3 text-[14px] text-gray-600 dark:text-gray-400">
+          Tech stacks: {{ item.stacks?.join(", ") }}
+        </div>
+      </div>
+    </Card>
+
+    <Card label="Waepon">
+      <div class="grid grid-cols-1 lg:grid-cols-[200px_auto] pt-5">
         <div></div>
-        <div class="grid grid-cols-2 gap-y-5">
-          <div v-for="(item, index) in skills" :key="index">
-            {{ item.label }}
+        <div class="grid grid-cols-2 gap-y-3">
+          <div v-for="(item, index) in skills" :key="index" class="text-[15px]">
+            &bull; {{ item.label }}
           </div>
         </div>
       </div>
     </Card>
 
-    <Card label="Projects">
-      <div class="grid grid-cols-1 gap-10">
-        <div v-for="(item, index) in projects" :key="index">
+    <Card label="Project">
+      <div class="">
+        <div
+          v-for="(item, index) in projects"
+          :key="index"
+          class="border-b dark:border-gray-700 py-5"
+        >
           <div>
             <a
               v-if="item.link"
               :href="item.link"
-              class="font-bold text-blue-700 cursor-pointer hover:underline"
+              class="text-blue-700 dark:text-blue-400 cursor-pointer hover:underline"
               >{{ item.name }}</a
             >
-            <span v-else class="font-bold">{{ item.name }}</span>
+            <span v-else class="">{{ item.name }}</span>
           </div>
-          <span class="block opacity-[.7] text-normal py-2">{{
+          <span class="block text-gray-600 dark:text-gray-400 text-[14px]">{{
             item.date
           }}</span>
-          <span class="block">{{ item.description }}</span>
+          <span class="block mt-3 text-[14px]">{{ item.description }}</span>
         </div>
       </div>
     </Card>
@@ -113,8 +124,8 @@ document.title = "About | Nurul Uhkrowi";
       </ul>
     </Card> -->
 
-    <Card label="Shoot a message" class="pb-10">
-      <div class="grid grid-cols-2 gap-10">
+    <Card label="Shoot a message">
+      <div class="grid grid-cols-2 gap-10 py-5">
         <a
           v-for="(item, index) in contacts.filter((x) => x.onProfile == true)"
           :key="index"
@@ -122,11 +133,8 @@ document.title = "About | Nurul Uhkrowi";
           target="_blank"
           class="flex contact-container"
         >
-          <div class="flex items-start mr-3">
-            <img :src="item.iconUrl" :alt="item.label" class="w-[25px]" />
-          </div>
           <div>
-            <span class="block font-bold">{{ item.label }}</span>
+            <span class="block font-bold text-[14px]">{{ item.label }}</span>
             <span class="contact-label">{{ item.displayText }}</span>
           </div>
         </a>

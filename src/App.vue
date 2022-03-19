@@ -1,34 +1,38 @@
+<script setup>
+import { onMounted } from "vue";
+
+onMounted(() => {
+  if (
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+});
+</script>
+
 <template>
-  <div
-    class="flex justify-center text-[#08102b] text-[16px] h-screen p-[15px] lg:p-[0px]"
-  >
-    <router-view class="max-w-[800px]" />
+  <!-- class="flex justify-center text-[#08102b] dark:text-white text-[16px] h-screen p-[15px] lg:p-[0px]" -->
+  <div class="flex justify-center dark:text-white">
+    <router-view class="w-full lg:max-w-[700px]" />
   </div>
 </template>
 
 <style lang="scss">
 @import url("../public/css/github-dark.min.css");
 
-// @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-
 @font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/Merriweather.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-family: "Quattro";
+  src: url("/fonts/iAWriterQuattroV.ttf") format("truetype");
 }
 
-// @font-face {
-//   font-family: "Charter";
-//   src: url("/fonts/charter-normal.woff") format("woff");
-// }
-
 body {
-  font-family: Merriweather, sans-serif;
-  @apply lg:bg-gray-200;
+  font-family: Quattro, sans-serif;
+  // @apply lg:bg-gray-200;
+  @apply dark:bg-[#191919];
 }
 
 /* width */

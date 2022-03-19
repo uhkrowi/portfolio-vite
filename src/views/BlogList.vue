@@ -62,7 +62,7 @@ document.title = "Blog";
 <template>
   <Card label="Blog">
     <div class="w-full flex justify-end pb-5" style="z-index: 9999">
-      <div class="relative">
+      <div class="">
         <div
           class="flex items-center max-w-64 bg-white rounded-xl p-2 overflow-none bg-[#f2f1ef]"
         >
@@ -84,7 +84,7 @@ document.title = "Blog";
             v-model="searchText"
             autocomplete="off"
             placeholder="Search posts"
-            class="grow outline-none bg-[#f2f1ef] text-[15px]"
+            class="grow outline-none bg-[#f2f1ef] text-[15px] dark:text-black"
             @keyup.enter="searchPosts()"
           />
         </div>
@@ -128,10 +128,10 @@ document.title = "Blog";
         v-for="(item, index) in blogs"
         :key="index"
         :to="`/blog/${item.id}`"
-        class="cursor-pointer hover:bg-[#f2f1ef]"
+        class="cursor-pointer hover:bg-[#f2f1ef] dark:hover:text-black"
       >
         <div
-          class="md:flex justify-between items-center py-3 md:py-2 md:pt-3 px-3"
+          class="md:flex justify-between items-center py-3 md:py-2 md:pt-3"
         >
           <span class="block">{{ item.title.rendered }}</span>
           <div class="text-xs text-right mt-2 md:mt-0">
@@ -139,7 +139,7 @@ document.title = "Blog";
             {{ item._embedded["wp:term"][0].map((x) => x.name).join(", ") }}
           </div>
         </div>
-        <div class="border-b border-gray-300 w-full mt-1"></div>
+        <div class="border-b dark:border-gray-700 w-full mt-1"></div>
       </router-link>
     </div>
   </Card>
