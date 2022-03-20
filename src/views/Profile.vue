@@ -24,7 +24,7 @@ document.title = "About | Nurul Uhkrowi";
         <div class="w-full md:flex md:justify-center">
           <div class="dark:text-white text-[16px] md:w-[60%] lg:w-full">
             <span class="block">Hi, my name's Nurul.</span>
-            <br>
+            <br />
             <span class="block">
               I'm currently working as a freelance web developer.
             </span>
@@ -72,7 +72,8 @@ document.title = "About | Nurul Uhkrowi";
           class="flex justify-between items-center text-gray-600 dark:text-gray-400 text-[14px]"
         >
           <span>{{ item.company }}</span>
-          <span>{{ item.date }}</span>
+          <span class="lg:hidden">{{ item.date }}</span>
+          <span class="hidden lg:block">{{ item.longDate }}</span>
         </div>
         <div class="mt-3 text-[14px]">{{ item.desc }}</div>
         <div class="mt-3 text-[14px] text-gray-600 dark:text-gray-400">
@@ -108,8 +109,11 @@ document.title = "About | Nurul Uhkrowi";
             >
             <span v-else class="">{{ item.name }}</span>
           </div>
-          <span class="block text-gray-600 dark:text-gray-400 text-[14px]">{{
+          <span class="block text-gray-600 dark:text-gray-400 text-[14px] lg:hidden">{{
             item.date
+          }}</span>
+          <span class="hidden lg:block text-gray-600 dark:text-gray-400 text-[14px]">{{
+            item.longDate
           }}</span>
           <span class="block mt-3 text-[14px]">{{ item.description }}</span>
         </div>

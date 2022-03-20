@@ -92,7 +92,7 @@ const generatedEducationTable = generateTable(generatedEducations);
 
 const generatedProjects = projects.map((project) => {
   return [
-    project.date,
+    project.longDate,
     {
       stack: [
         { text: project.name, style: ["bold"], margin: [0, 0, 0, 5] },
