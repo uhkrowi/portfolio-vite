@@ -6,7 +6,7 @@ const { label } = defineProps({
 
 <template>
   <div class="w-full py-[20px]">
-    <h2 v-if="label" class="text-xl pb-2 font-bold">
+    <h2 v-if="label" class="text-xl font-bold">
       <div>{{ label }}</div>
       <!-- <div class="h-1 w-10 mt-2 bg-red-500 rounded-md">&nbsp;</div> -->
     </h2>

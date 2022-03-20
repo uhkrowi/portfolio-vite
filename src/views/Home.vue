@@ -14,6 +14,7 @@ function toggleNavMode() {
   <div class="relative">
     <div
       class="fixed h-16 w-full lg:max-w-[700px] navbar flex justify-between items-center px-5 lg:px-2"
+      style="z-index: 999"
     >
       <a href="/#/about" class="hover:underline">About</a>
       <div class="flex">
@@ -22,7 +23,7 @@ function toggleNavMode() {
       </div>
     </div>
     <router-view
-      class="mt-20 lg:mt-0 lg:pt-[100px] w-full lg:max-w-[700px] px-5"
+      class="mt-20 lg:mt-0 lg:pt-[100px] w-full lg:max-w-[700px] px-5 relative"
       style="z-index: 997"
     ></router-view>
   </div>

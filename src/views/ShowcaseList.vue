@@ -17,10 +17,10 @@ document.title = "Showcase";
 
 <template>
   <Card label="Showcase">
-    <div v-if="showcases.length === 0" class="text-center">
+    <div v-if="showcases.length === 0" class="text-center pt-5">
       Loading content...
     </div>
-    <div class="masonry-1-col md:masonry-3-col">
+    <div class="masonry-1-col md:masonry-3-col pt-5">
       <router-link
         v-for="(item, index) in showcases"
         :to="`/showcase/${item.id}`"
@@ -46,7 +46,7 @@ document.title = "Showcase";
             style="z-index: 998"
           />
         </div>
-        <span class="block mt-2 text-center text-md text-black lg:hidden">{{
+        <span class="block mt-2 text-center text-md text-black dark:text-white lg:hidden">{{
           item.title.rendered
         }}</span>
       </router-link>

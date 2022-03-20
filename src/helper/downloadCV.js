@@ -8,8 +8,8 @@ import personalStatement from "@/assets/data/personal-statement.json";
 
 pdfMake.fonts = {
   Inter: {
-    normal: window.location.origin + "/fonts/Charter Regular.ttf",
-    bold: window.location.origin + "/fonts/Charter Bold.ttf",
+    normal: window.location.origin + "/fonts/iAWriterQuattroSRegular.ttf",
+    bold: window.location.origin + "/fonts/iAWriterQuattroSBold.ttf",
   },
 };
 
@@ -55,13 +55,23 @@ function generateTable(body) {
 const generatedExperiences = experiences.map((experience) => {
   return [
     experience.date,
+    // start,
     {
       stack: [
         { text: experience.position, style: ["bold"] },
-        { text: experience.company, margin: [0, 0, 0, 5] },
+        { text: experience.company, margin: [0, 0, 0, 7] },
         {
-          ul: experience.jobs,
+          text: experience.desc,
+          margin: [0, 0, 0, 7],
+          style: ["textGray"],
         },
+        {
+          text: `Tech stacks: ${experience.stacks.join(", ")}.`,
+          style: ["textGray"],
+        },
+        // {
+        //   ul: experience.jobs,
+        // },
         "\n",
       ],
     },
@@ -70,6 +80,7 @@ const generatedExperiences = experiences.map((experience) => {
 const generatedExperienceTable = generateTable(generatedExperiences);
 
 const generatedEducations = educations.map((education) => {
+  // const date = education.date.split(' - ')[0].split
   return [
     education.date,
     {
@@ -125,7 +136,7 @@ var dd = {
                   margin: [0, 0, 0, 3],
                 },
                 {
-                  text: "Web Developer",
+                  text: "Full-Stack Web Developer",
                   style: "subHeader",
                   margin: [0, 0, 0, 15],
                 },
@@ -151,7 +162,7 @@ var dd = {
     getSectionLabel("PROFILE"),
     generatedPersonalStatementTable,
     "\n",
-    getSectionLabel("WORK EXPERIENCE"),
+    getSectionLabel("EXPERIENCE"),
     generatedExperienceTable,
     { text: "", pageBreak: "before" },
     getSectionLabel("SKILL"),
@@ -172,7 +183,7 @@ var dd = {
       bold: true,
     },
     subHeader: {
-      fontSize: 11,
+      // fontSize: 11,
       bold: true,
     },
     small: {
@@ -183,6 +194,9 @@ var dd = {
     },
     textBlue: {
       color: "#3576ba",
+    },
+    textGray: {
+      color: "#424242",
     },
   },
   defaultStyle: {
@@ -198,10 +212,10 @@ async function downloadCV() {
   // const profileImg = new Image();
   // profileImg.src = "/images/profile.jpg";
 
-  profileImg.onload = async () => {
-    // dd.images.profile = await getBase64FromUrl(profileImg);
-    pdfMake.createPdf(dd).download("CV - Nurul Uhkrowi - Web Developer");
-  };
+  // profileImg.onload = async () => {
+  // dd.images.profile = await getBase64FromUrl(profileImg);
+  pdfMake.createPdf(dd).download("CV - Nurul Uhkrowi - Web Developer");
+  // };
 }
 
 export default downloadCV;

@@ -25,6 +25,11 @@ const menus = [
     icon: null,
     downloadAttr: "CV - Nurul Uhkrowi - Web Developer.pdf",
   },
+  // {
+  //   label: "Download My CV",
+  //   link: "/#/download-cv",
+  //   icon: "https://img.icons8.com/fluency-systems-regular/2x/download-2.png",
+  // },
 ];
 
 const toggleNavigation = () => {
@@ -59,7 +64,7 @@ function hideNavigation() {
           :alt="item.label"
           class="w-5 h-5 opacity-[80%] text-[15px]"
         />
-        <div v-else class="mx-3 lg:mx-5 hover:underline">{{item.label}}</div>
+        <div v-else class="mx-3 lg:mx-5 hover:underline">{{ item.label }}</div>
       </a>
     </div>
   </div>

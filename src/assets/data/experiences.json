@@ -2,7 +2,7 @@
   {
     "position": "Back-End Web Developer",
     "company": "PT Astra International Tbk",
-    "date": "Dec 2021 - Present",
+    "date": "12/21 - Present",
     "jobs": [
       "As a body hire from PT BeIT",
       "Join into Astra team to modify the existing system",
@@ -12,9 +12,9 @@
     "stacks": [".NET", "C#", "SQL Server"]
   },
   {
-    "position": "Front End Web Developer",
+    "position": "Front-End Web Developer",
     "company": "PT BeIT Inovasi Tiwikrama",
-    "date": "Jan 2020 - Present",
+    "date": "01/20 - Present",
     "jobs": [
       "Creating mockups and prototypes",
       "Design and build UI/UX",
@@ -25,17 +25,17 @@
     "stacks": ["Javascript", "Vue.js", "Tailwind CSS"]
   },
   {
-    "position": "Front End Web Developer",
+    "position": "Front-End Web Developer",
     "company": "PT Perjalanan Menembus Galaksi",
-    "date": "Sep 2021 - Nov 2021",
+    "date": "09/21 - 11/21",
     "jobs": ["Designing and creating web components", "Integrating API"],
     "desc": "Working on designing & creating web components of an online shop back office.",
     "stacks": ["Javascript", "Vue.js", "Nuxt.js"]
   },
   {
-    "position": "Back End Web Developer",
+    "position": "Back-End Web Developer",
     "company": "PT Ink & Canvas",
-    "date": "Nov 2017 - Oct 2019",
+    "date": "11/17 - 10/19",
     "jobs": [
       "Working closely with clients to establish problem, specifications and system designs",
       "Coordinating with internal in developing project plans and solutions",
@@ -46,9 +46,9 @@
     "stacks": [".NET", "C#", "PostgreSQL", "Microsoft Azure"]
   },
   {
-    "position": "Full Stack Web Developer",
+    "position": "Full-Stack Web Developer",
     "company": "PT IndoVisual Presentatama",
-    "date": "Feb 2016 - Nov 2017",
+    "date": "02/16 - 11/17",
     "jobs": [
       "Collaborating with product management team to design, build, integrate and test systems",
       "Designing new product elements such as IR and RF connection, CCTV live streaming, hardware integration, and device-to-device communication",

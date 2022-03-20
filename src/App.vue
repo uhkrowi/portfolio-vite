@@ -26,7 +26,8 @@ onMounted(() => {
 
 @font-face {
   font-family: "Quattro";
-  src: url("/fonts/iAWriterQuattroV.ttf") format("truetype");
+  src: url("/fonts/iAWriterQuattroV-old.ttf") format("truetype");
+  font-display: swap;
 }
 
 body {

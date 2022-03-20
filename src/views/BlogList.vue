@@ -61,7 +61,7 @@ document.title = "Blog";
 
 <template>
   <Card label="Blog">
-    <div class="w-full flex justify-end pb-5" style="z-index: 9999">
+    <div class="w-full flex justify-end pb-5 pt-5" style="z-index: 9999">
       <div class="">
         <div
           class="flex items-center max-w-64 bg-white rounded-xl p-2 overflow-none bg-[#f2f1ef]"
