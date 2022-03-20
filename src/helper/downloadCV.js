@@ -54,7 +54,7 @@ function generateTable(body) {
 
 const generatedExperiences = experiences.map((experience) => {
   return [
-    experience.date,
+    experience.longDate,
     // start,
     {
       stack: [
