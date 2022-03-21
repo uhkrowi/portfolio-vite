@@ -1,18 +1,26 @@
 [
   {
-    "showOnCV": true, 
+    "showOnCV": true,
+    "label": "HTML"
+  },
+  {
+    "showOnCV": true,
+    "label": "CSS"
+  },
+  {
+    "showOnCV": true,
     "label": "Go"
   },
   {
-    "showOnCV": false, 
+    "showOnCV": false,
     "label": "GoFiber"
   },
   {
-    "showOnCV": true, 
+    "showOnCV": true,
     "label": "Javascript"
   },
   {
-    "showOnCV": true, 
+    "showOnCV": true,
     "label": "NodeJS"
   },
   {
@@ -20,43 +28,47 @@
     "label": "Express.js"
   },
   {
-    "showOnCV": true, 
+    "showOnCV": true,
     "label": "React.js"
   },
   {
-    "showOnCV": true, 
+    "showOnCV": true,
     "label": "Vue.js"
   },
   {
-    "showOnCV": true, 
+    "showOnCV": true,
     "label": "MySQL"
   },
   {
-    "showOnCV": true, 
+    "showOnCV": true,
     "label": "PostgreSQL"
   },
   {
-    "showOnCV": false, 
+    "showOnCV": false,
     "label": "MongoDB"
   },
   {
-    "showOnCV": true, 
+    "showOnCV": true,
+    "label": "Git"
+  },
+  {
+    "showOnCV": true,
     "label": "Wordpress"
   },
   {
-    "showOnCV": false, 
+    "showOnCV": false,
     "label": "Heroku"
   },
   {
-    "showOnCV": false, 
+    "showOnCV": false,
     "label": "Netlify"
   },
   {
-    "showOnCV": true, 
+    "showOnCV": true,
     "label": "Microsoft Azure"
   },
   {
-    "showOnCV": false, 
+    "showOnCV": false,
     "label": "Twilio"
   }
 ]

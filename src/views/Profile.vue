@@ -17,7 +17,7 @@ document.title = "About | Nurul Uhkrowi";
             id="img-profile"
             src="/images/profile-1.png"
             alt="profile image"
-            class="w-[100px] h-[100px] rounded-full lg:rounded-none mb-8 lg:mb-0"
+            class="w-[100px] h-[100px] rounded-full lg:rounded-none mb-8 lg:mb-0 scale-x-[-1]"
           />
           <!-- class="w-[100px] h-[100px] rounded-full shadow-custom2 scale-x-[-1]" -->
         </div>
@@ -69,11 +69,11 @@ document.title = "About | Nurul Uhkrowi";
       >
         <div>{{ item.position }}</div>
         <div
-          class="flex justify-between items-center text-gray-600 dark:text-gray-400 text-[14px]"
+          class="md:flex justify-between items-center text-gray-600 dark:text-gray-400 text-[14px]"
         >
-          <span>{{ item.company }}</span>
-          <span class="lg:hidden">{{ item.date }}</span>
-          <span class="hidden lg:block">{{ item.longDate }}</span>
+          <div>{{ item.company }}</div>
+          <div class="md:hidden text-[13px]">{{ item.date }}</div>
+          <div class="hidden md:block">{{ item.longDate }}</div>
         </div>
         <div class="mt-3 text-[14px]">{{ item.desc }}</div>
         <div class="mt-3 text-[14px] text-gray-600 dark:text-gray-400">

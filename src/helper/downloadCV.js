@@ -54,7 +54,7 @@ function generateTable(body) {
 
 const generatedExperiences = experiences.map((experience) => {
   return [
-    experience.longDate,
+    { text: experience.longDate, style: ["textGray"] },
     // start,
     {
       stack: [
@@ -82,7 +82,7 @@ const generatedExperienceTable = generateTable(generatedExperiences);
 const generatedEducations = educations.map((education) => {
   // const date = education.date.split(' - ')[0].split
   return [
-    education.date,
+    { text: education.date, style: ["textGray"] },
     {
       stack: [{ text: education.major, style: ["bold"] }, education.place],
     },
@@ -92,11 +92,11 @@ const generatedEducationTable = generateTable(generatedEducations);
 
 const generatedProjects = projects.map((project) => {
   return [
-    project.longDate,
+    { text: project.longDate, style: ["textGray"] },
     {
       stack: [
         { text: project.name, style: ["bold"], margin: [0, 0, 0, 5] },
-        project.description,
+        { text: project.description, style: ["textGray"] },
         "\n",
       ],
     },
@@ -196,7 +196,7 @@ var dd = {
       color: "#3576ba",
     },
     textGray: {
-      color: "#424242",
+      color: "#323232",
     },
   },
   defaultStyle: {
