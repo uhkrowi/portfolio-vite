@@ -109,13 +109,18 @@ document.title = "About | Nurul Uhkrowi";
             >
             <span v-else class="">{{ item.name }}</span>
           </div>
-          <span class="block text-gray-600 dark:text-gray-400 text-[14px] lg:hidden">{{
-            item.date
-          }}</span>
-          <span class="hidden lg:block text-gray-600 dark:text-gray-400 text-[14px]">{{
-            item.longDate
-          }}</span>
+          <span
+            class="block text-gray-600 dark:text-gray-400 text-[14px] lg:hidden"
+            >{{ item.date }}</span
+          >
+          <span
+            class="hidden lg:block text-gray-600 dark:text-gray-400 text-[14px]"
+            >{{ item.longDate }}</span
+          >
           <span class="block mt-3 text-[14px]">{{ item.description }}</span>
+          <div class="mt-3 text-[14px] text-gray-600 dark:text-gray-400">
+            Tech stacks: {{ item.stacks?.join(", ") }}
+          </div>
         </div>
       </div>
     </Card>
